@@ -6,9 +6,6 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
-class IMDBLookupFailureException(Exception):
-  pass
-
 class GuideFetcher(object):
   def __init__(self):
     self.episodes = []
@@ -60,16 +57,4 @@ class GuideFetcher(object):
       self.episodes.append(info)
 
 class EpisodeRenamer(object):
-  pass
-
-class MediaSeries(object):
-  pass
-
-class Season(object):
-  pass
-
-class Episode(object):
-  pass
-
-class MediaFile(object):
   pass
