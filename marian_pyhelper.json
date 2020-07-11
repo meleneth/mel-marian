@@ -1,0 +1,60 @@
+{
+  "project": {
+    "namespace": "mel",
+    "name": "marian",
+    "author": "Meleneth",
+    "author_email": "meleneth@gmail.com",
+    "description": "Utilities to help rename media files according to their IMDB entries",
+    "license": "GPL",
+    "requirements": {
+      "requests": true
+    },
+    "requirements_dev": {
+      "pytest": true,
+      "pytest-cov": true
+    }
+  },
+  "scripts": [
+    {
+      "name": "fetch-episode-guide",
+      "description": "a program to do great things",
+      "arguments": [],
+      "subcommands": [],
+      "entry_points": []
+    },
+    {
+      "name": "episode-guide-rename",
+      "description": "a program to do great things",
+      "arguments": [],
+      "subcommands": [],
+      "entry_points": []
+    }
+  ],
+  "flaskapps": [],
+  "classes": [
+    {
+      "name": "GuideFetcher"
+    },
+    {
+      "name": "EpisodeRenamer"
+    },
+    {
+      "name": "MediaSeries"
+    },
+    {
+      "name": "Season"
+    },
+    {
+      "name": "Episode"
+    },
+    {
+      "name": "MediaFile"
+    }
+  ],
+  "exceptions": [
+    {
+      "name": "IMDBLookupFailure"
+    }
+  ],
+  "functions": []
+}
