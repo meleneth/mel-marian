@@ -14,3 +14,6 @@ def main():
 
   seriesname = " ".join(sys.argv[1:])
   logger.info("%s" % (seriesname))
+
+  fetcher = GuideFetcher()
+  fetcher.find_guide(seriesname)

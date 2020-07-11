@@ -1,5 +1,7 @@
 # Byte-compiled / optimized / DLL files
 MyPython38
+doc/_build/html
+doc/_build/doctrees
 
 __pycache__/
 *.py[cod]
