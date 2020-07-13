@@ -70,6 +70,8 @@ class SeriesInfo(object):
   def load_episode_info(self, filename):
     with open(filename) as f:
      self.episodes = json.load(f)
+     sorted_eps = sorted(self.episodes, key=lambda x: x["season_no"])
+     self.episodes = sorted(sorted_eps, key=lambda x: x["episode_no"])
     return self
   def save_episode_info(self):
     with open(self.saved_info_filename(), "w") as f:
@@ -99,9 +101,9 @@ class SeriesInfo(object):
         if len(episodes) != 1:
           logger.info("Not a single episode for episode %s" % (episode_no))
           answer = self.interactive_ask_dupe_episodes(episodes)
+          episode_to_keep = list(filter(lambda x: x['name'] == answer['episode_name'], episodes))[0]
           for episode in episodes:
-            logger.info(answer)
-            if episode['name'] != answer['episode_name']:
+            if not episode is episode_to_keep:
               self.episodes.remove(episode)
               made_changes = True
       if made_changes:
