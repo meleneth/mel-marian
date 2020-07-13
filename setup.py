@@ -8,7 +8,7 @@ setup(name='mel-marian',
   license='GPL',
   packages=find_packages('src'),
   package_dir={'': 'src'},
-  install_requires=['requests', 'beautifulsoup4'],
+  install_requires=['requests', 'beautifulsoup4', 'PyInquirer', 'tabulate'],
   tests_require=['pytest', 'pytest-cov'],
   entry_points = {
     'console_scripts': [

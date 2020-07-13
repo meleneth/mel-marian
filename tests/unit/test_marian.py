@@ -5,7 +5,7 @@ import flexmock
 from bs4 import BeautifulSoup
 
 import mel.marian
-from mel.marian import GuideFetcher
+from mel.marian import GuideFetcher, EpisodeRenamer, SeriesInfo, EpisodeGuess
 
 def test_GuideFetcher_parse_search_result():
   test_dir = os.path.dirname(os.path.abspath(__file__))
@@ -21,7 +21,8 @@ def test_GuideFetcher_parse_series():
     test_html = f.read()
   guide = GuideFetcher()
   results = guide.parse_series(BeautifulSoup(test_html, 'html.parser'), "/shows/farscape/episodes/")
-  assert ['/shows/farscape/season-5/',
+  assert [
+    '/shows/farscape/season-5/',
     '/shows/farscape/season-4/',
     '/shows/farscape/season-3/',
     '/shows/farscape/season-2/',
@@ -42,3 +43,26 @@ def test_GuideFetcher_parse_season():
   assert "12/8/08" == episode["air_date"]
   assert "Boston Legal" == episode["show_name"]
   assert 5 == episode["season_no"]
+
+def SERIES_INFO():
+  series = []
+
+def test_SeriesInfo_season():
+  info = SeriesInfo("Cowboy Bebop")
+
+def test_EpisodeGuess_is_video_file():
+  guess = EpisodeGuess("Serial_Experiments_Lain_01.mkv")
+  assert guess.is_video_file()
+
+  guess = EpisodeGuess("Serial_Experiments_Lain_01.json")
+  assert not guess.is_video_file()
+
+def test_EpisodeGuess_guesses_episodes():
+  pass
+
+
+def test_EpisodeRenamer_guess_file():
+  renamer = EpisodeRenamer()
+
+def test_EpisodeRenamer_guess_episodes():
+  renamer = EpisodeRenamer()

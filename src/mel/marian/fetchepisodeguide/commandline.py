@@ -17,3 +17,4 @@ def main():
 
   fetcher = GuideFetcher()
   fetcher.find_guide(seriesname)
+  fetcher.save_guide(seriesname)
