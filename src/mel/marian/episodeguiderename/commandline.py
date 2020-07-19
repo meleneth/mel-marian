@@ -30,4 +30,8 @@ def main():
   seriesinfo = SeriesInfo(seriesname).load_episode_info(series_info_filename)
   seriesinfo.interactive_audit_seriesdata()
   logger.info("---- back in script land ----")
+  guesser = EpisodeRenamer()
+  guesser.load_media_files()
+  guesser.display_guesses()
+  print("--- back in script land, again ---")
   print(tabulate([[x['season_no'], x['episode_no'], x['name']] for x in seriesinfo.episodes], tablefmt="pretty"))

@@ -2,6 +2,7 @@ import re
 import logging
 import time
 import json
+import os
 import os.path
 
 from tabulate import tabulate
@@ -139,6 +140,7 @@ class EpisodeGuess(object):
     self.season_no = None
     self.episode_no = None
     self.episode_name = None
+    self.confidence = 0
     self.destination_filename = filename
 
   def is_video_file(self):
@@ -148,15 +150,38 @@ class EpisodeGuess(object):
       return True
     return False
 
+  def guesser_text(self):
+      return "%s %s => %s" % (self.confidence, self.filename, self.destination_filename)
+
+class Guesser(object):
+  def guess(self, episode)
+    pass
+
+class PositionalGuesser(Guesser):
+  pass
+
 class EpisodeRenamer(object):
   def __init__(self):
     self.episodes = []
     self.extra_files = []
     self.series_info = False
+    self.guesses = []
 
   def load_media_files(self):
     """Load all files from the current directory."""
-    pass
+    # Import the os module, for the os.walk function
+
+    # Set the directory you want to start from
+    rootDir = '.'
+    for dirName, subdirList, fileList in os.walk(rootDir):
+      print('Found directory: %s' % dirName)
+      for fname in fileList:
+        guesser = EpisodeGuess(fname)
+        if guesser.is_video_file():
+          self.guesses.append(guesser)
+
+  def display_guesses(self):
+    print(tabulate([[x.confidence, x.filename, x.destination_filename] for x in self.guesses], tablefmt="pretty"))
 
   def guess_file(self, filename):
     pass
