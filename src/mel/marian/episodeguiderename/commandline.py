@@ -10,10 +10,12 @@ from PyInquirer import prompt, print_json, Separator
 from mel.marian import GuideFetcher, EpisodeRenamer, SeriesInfo, EpisodeGuess
 
 def main():
-  logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s",
+  logging.basicConfig(
+    format="%(asctime)s %(levelname)s: %(message)s",
     datefmt="%m/%d/%Y %I:%M:%S %p",
     level=logging.INFO,
-    stream=sys.stdout)
+    stream=sys.stdout
+  )
   logger = logging.getLogger()
 
   cwd = os.getcwd()

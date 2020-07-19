@@ -8,9 +8,9 @@ class SeriesInfo(object):
     self.name = name
   def load_episode_info(self, filename):
     with open(filename) as f:
-     self.episodes = json.load(f)
-     sorted_eps = sorted(self.episodes, key=lambda x: x["season_no"])
-     self.episodes = sorted(sorted_eps, key=lambda x: x["episode_no"])
+      self.episodes = json.load(f)
+      sorted_eps = sorted(self.episodes, key=lambda x: x["season_no"])
+      self.episodes = sorted(sorted_eps, key=lambda x: x["episode_no"])
     return self
   def save_episode_info(self):
     with open(self.saved_info_filename(), "w") as f:

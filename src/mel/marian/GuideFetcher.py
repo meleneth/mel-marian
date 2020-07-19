@@ -6,7 +6,6 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
-
 class GuideFetcher(object):
   def __init__(self):
     self.episodes = []
@@ -46,7 +45,7 @@ class GuideFetcher(object):
     return list(filter(lambda x: x != url, [x["href"] for x in div.find_all("a")]))
 
   def parse_season(self, soup):
-    (title, season)= soup.find_all("title")[0].text.strip().split(" - ")[0:2]
+    (title, season) = soup.find_all("title")[0].text.strip().split(" - ")[0:2]
     season = int(season.replace("Season ", ""))
     episodes = [x.parent for x in soup.find_all("div", class_="description")]
     for episode in episodes:
