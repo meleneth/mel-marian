@@ -1,0 +1,1494 @@
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+
+
+<script type="text/javascript" charset="utf-8">
+	var https_page = false;
+	if (window.location.protocol == 'https:') {
+		if (!https_page) {
+			var url = 'http://www.tv.com/shows/farscape/episodes/';
+			location.href = url;
+		}
+	} else if (window.location.protocol == 'http:') {
+		if (https_page) {
+			var url = 'https://secure.tv.com/shows/farscape/episodes/';
+		location.href = url;
+		}
+	}
+</script>
+
+
+	<meta http-equiv="Content-Language" content="en-US">
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwAAWVNADgcFVVBU",licenseKey:"860f7644b8",applicationID:"645116"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(19),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);n.aborted||(e.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):i(this,t),e.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime]))}}function o(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=c(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,n){t.params.status=n.status;var e=w(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){i(n,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=f(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),u.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=m(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<l;s++)n.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),u.on("xhr-load-added",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],n)}),u.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],n)}),u.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,n){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)}),u.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(t,n){var e=t.responseType;return"json"===e&&null!==n?n:"arraybuffer"===e||"blob"===e||"json"===e?o(t.response):"text"===e||""===e||void 0===e?o(t.responseText):void 0}var o=t(16);n.exports=r},{}],15:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],16:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],17:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],18:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,n){var e=t.getEntries();e.length>0&&c("lcp",[e[e.length-1]])}function i(t){if(t instanceof u&&!l){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:f.now()-e,l=!0,c("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],20:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],21:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],22:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],23:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":2,"licenseKey":"860f7644b8","agent":"","transactionName":"MgQEZ0dYCxEAVRBbDQtOIEZbWhELDlhLRhQGDgsdVEkVEU9lDF0VFk8QWlBOFlgERg1BDQEEIUZcXQA=","applicationID":"645116","errorBeacon":"bam.nr-data.net","applicationTime":172}</script>
+	<meta name="author" content="TV.com">
+	<meta name="copyright" content="&copy; 2020 TV.com">
+	<meta name="description" content="
+
+		Episode Recap Farscape on TV.com. Watch Farscape episodes, get episode information, recaps and more.
+
+" />
+	<meta name="application-name" content="TV.com"/>
+	<meta name="msapplication-TileColor" content="#67b7ed"/>
+	<meta name="msapplication-TileImage" content="/public/images/tvcom_logos/ie10-pin.png"/>
+	<meta name="msapplication-starturl" content="/" />
+
+	<meta property="og:site_name" content="TV.com"/>
+<meta property="fb:app_id" content="63749637650"/>
+<meta property="og:url" content="http://www.tv.com/shows/farscape/" />
+<meta property="og:image" content="http://img2.tvtome.com/i/tvp/gQ/1029.jpg" />
+<meta property="og:title" content="Farscape" />
+<meta property="og:type" content="tv_show" />
+<meta property="og:description" content="Five years ago, astronaut John Crichton attempted to use the Earth&#39;s atmosphere to propel his ship, Farscape 1, at great speeds across the solar system. He went much further though and was sucked down a wormhole to a distant part of the galaxy and into the middle of a battle. He was rescued by a group of escaping prisoners and taken aboard their ship, a living ship. As the years went by, Crichton has made enemies, powerful and dangerous enemies. On his journey to find a way back home, he freed other captives who became part of the crew on Moya." />
+
+
+
+
+	<title>Farscape - Episode Guide - TV.com</title>
+
+
+
+	<link rel="canonical" href="/shows/farscape/episodes/"/>
+
+
+
+
+
+
+
+	<style id="tvc_cjp">
+		body { display:none !important; }
+	</style>
+	<script>
+		if (self === top) {
+			var cjp = document.getElementById("tvc_cjp");
+			cjp.parentNode.removeChild(cjp);
+		} else {
+			top.location = self.location;
+		}
+	</script>
+
+	<link rel="stylesheet" href="/public/CACHE/css/08e3d67065c0.css" type="text/css" />
+
+	<link rel="stylesheet" href="/public/CACHE/css/f41edc3a24b9.css" type="text/css" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="566e6088-8da4-4166-9760-fbd780e3d995"></script>
+
+
+<script>
+    (function(a){
+        var w=window,b='cbsoptanon',q='cmd',r='config';
+        w[b] = w[b] ? w[b] : {};
+        w[b][q] = w[b][q] ? w[b][q] : [];
+        w[b][r] = w[b][r] ? w[b][r] : [];
+
+        a.forEach(function(z){
+            w[b][z] = w[b][z] || function(){
+                var c=arguments;
+                w[b][q].push(function(){
+                    w[b][z].apply(w[b],c);
+                })
+            }
+        });
+    })(["onIframesReady","onFormsReady","onScriptsReady","onAdsReady"]);
+</script>
+
+
+
+
+
+<script src="https://production-cmp.isgprivacy.cbsi.com/dist/optanon.js" type="text/javascript" async></script>
+
+
+
+<script type="text/javascript" async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" charset="utf-8"></script>
+
+
+<script type="text/plain" class="optanon-category-4" async src="https://js-sec.indexww.com/ht/ls-tvcom.js" charset="utf-8"></script>
+
+
+<script type="text/plain" class="optanon-category-2" async src="https://ssl.google-analytics.com/ga.js" charset="utf-8"></script>
+
+<script type="application/javascript">
+    cbsoptanon.config.push({
+        enableServices: false,
+        setNpaOnConsentChange: true,
+        euMaxAttempts: 25,
+        countryCodeMaxAttempts: 25,
+        oneTrustTimeout: 700
+    });
+
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+        googletag.pubads().disableInitialLoad();
+    });
+
+    cbsoptanon.onAdsReady(function(cmp, options) {
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh();
+        });
+
+        cmp.ot.targetingAllowed(function(allowed) {
+            if (allowed){
+
+
+                        loadVendorTaboola();
+
+
+
+                        loadVendorViglink();
+
+
+            }
+        });
+    });
+</script>
+
+
+
+
+
+		<script type="text/javascript" src="/public/scripts/third_party/jquery/jquery-3.1.1.min.js"></script>
+
+
+		<script type="text/javascript">
+			var sdk = "https://urs.tv.com/sdk/urs.js";
+			$.getScript( sdk, function() {
+				TV_URS = URS.newInstance({appId:424, environment: URS.ursEnvironments.LIVE, version: 'v2.2', clientToken: '744b26d1066e4761'});
+			});
+		</script>
+
+	<script type="text/javascript" src="/public/CACHE/js/0f54431c3109.js"></script>
+
+		<script type="text/javascript" src="/public/scripts/tv/mobile_redir.js"></script>
+
+
+
+
+	<script>
+		TV_BASE_URL = "http://" + location.host;
+		GNE_USERNAME = "";
+		TV_GUID = uuid.v1();
+	</script>
+
+
+
+<script type="text/javascript">
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+
+	googletag.CBSigetCookieValue = function(ckNm) {
+		var value = null;
+		var allCookies = document.cookie;
+		var pos = allCookies.indexOf(ckNm);
+		if (pos != -1) {
+			var start = pos + ckNm.length + 1;
+			var end = allCookies.indexOf(";", start);
+			if (end == -1) end = allCookies.length;
+			value = allCookies.substring(start, end);
+		 }
+		 return value;
+	};
+
+	googletag.CBSiisEDT = function(dt) {
+		var edtStart = new Date(dt.getFullYear(), 2, 1);
+		edtStart = Date.UTC(edtStart.getUTCFullYear(), 2, 14-(edtStart.getUTCDay()+13)%7, 5);
+		var edtEnd = new Date(dt.getFullYear(), 10, 1);
+		edtEnd = Date.UTC(edtEnd.getUTCFullYear(), 10, 7-(edtEnd.getUTCDay()+6)%7, 4);
+		return dt.getTime() >= edtStart && dt.getTime() < edtEnd;
+	};
+
+	googletag.CBSiaddPageView = function () {
+		var pv=1;
+		var cookiename="pv";
+		if (document.cookie.indexOf(cookiename)!=-1) {
+			pv=parseInt(googletag.CBSigetCookieValue(cookiename));
+			if(isNaN(pv))
+			{  pv=1;
+			} else {
+				pv+=1;
+			}
+		}
+		var dt = new Date();
+		var exp = Date.UTC(dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate(), googletag.CBSiisEDT(dt) ? 4 : 5);
+		exp += exp > dt.getTime() ? 0 : 24*60*60*1000;
+		exp = new Date(exp).toUTCString();
+		var domainArr = document.domain.split('.').reverse();
+		var l2domain=document.domain;
+		if(domainArr[1]!=null)
+		{   l2domain = domainArr[1] + "." + domainArr[0];
+		}
+
+		document.cookie = cookiename + "=" + pv + ";path=/;domain=" + l2domain + ";expires=" + exp;
+		googletag.pubads().setTargeting("pv",""+pv);
+	};
+</script>
+<script type="text/javascript">
+	// Bidtellect listener
+	!window.addEventListener || window.addEventListener("message", function(e){
+		if (e.data && typeof e.data === 'string'){
+			if (e.data.indexOf('nativeAdBlankServed_') === 0){  // <- If the data starts with nativeAdBlankServed
+				if (e.origin !== window.location.protocol + "//" +  window.location.host){ // <- If it didn't originate from the current url
+					$('.hub_list .ad_holder').hide();
+				}
+			}
+		}
+	}, false);
+	// end Bidtellect listener
+
+	function blankAdCallback(width, height, pos) {
+		if(width == 11 && height == 11 && pos == "top"){
+			$('.hub_list .ad_holder').hide();
+		}
+	}
+
+	var specials = {};
+	function adCallBack(obj) {
+		if(obj.slot == specials["native_top"]){
+			if(obj.isEmpty == true){
+				$('.hub_list .ad_holder').hide();
+			}
+		}
+		if(obj.slot == specials["omnibar_top"]){
+			if(obj.isEmpty == false){
+				var omnibar_height = $('.over_the_top_ad_wrapper').height();
+				if ($.isNumeric(omnibar_height)){
+					if (omnibar_height > 1){
+						TvCore.adjustHeader.changeSpacingHeight(50 + omnibar_height);
+					}
+				}
+			}
+		}
+	}
+
+	googletag.cmd.push(function() {
+		var cbsiftag, ftagmatch, ftagregex = /[\^\s\W]ftag\=([^\?\&\/]+)/i; if (ftagmatch = ftagregex.exec(document.location)) { cbsiftag = ftagmatch[1]; }
+		var cbsivndid, vndidmatch, vndidregex = /[\^\s\W]vndid\=([^\?\&\/]+)/i; if (vndidmatch = vndidregex.exec(document.location)) { cbsivndid = vndidmatch[1]; }
+		var tv_dfpTag = "/8264/aw-tv/shows/action-and-adventure";
+
+
+			specials["omnibar_top"] = googletag.defineSlot(tv_dfpTag, [980,45], "omnibar_top")
+				.addService(googletag.pubads())
+				.setTargeting("pos","top");
+
+
+
+				googletag.defineSlot(tv_dfpTag, [[728, 90], [970, 66], [970, 250], [728, 91], [321, 31], [7,7]], "leader_plus_top")
+					.addService(googletag.pubads())
+					.setTargeting("pos", "top");
+
+
+
+
+
+
+
+			window.mpu_top = googletag.defineSlot(tv_dfpTag, [[300,250],[300,600]], "mpu_top")
+
+				.addService(googletag.pubads())
+				.setTargeting("pos", "top");
+
+
+
+
+
+
+				googletag.defineSlot(tv_dfpTag, [290,75], "listings_module")
+					.addService(googletag.pubads());
+
+
+
+
+
+
+
+
+			window.mpu_bottom = googletag.defineSlot(tv_dfpTag, [300,250], "mpu_bottom")
+				.addService(googletag.pubads())
+				.setTargeting("pos", "bottom");
+
+
+
+
+				window.leader_bottom = googletag.defineSlot(tv_dfpTag, [[728, 90], [728,92], [970, 250], [970, 66]], "leader_bottom")
+					.addService(googletag.pubads())
+					.setTargeting("pos", "bottom");
+
+
+
+
+			googletag.defineSlot(tv_dfpTag, [1600,1000], "skin")
+				.addService(googletag.pubads())
+				.setTargeting("pos", "top");
+
+
+
+			googletag.defineOutOfPageSlot(tv_dfpTag, "intromercial")
+				.addService(googletag.pubads());
+
+
+
+
+		googletag.pubads().setTargeting("show", "1029");
+
+
+
+		if(cbsiftag){googletag.pubads().setTargeting('ftag',cbsiftag);}
+		if(cbsivndid){googletag.pubads().setTargeting('vndid',cbsivndid);}
+
+
+
+
+
+		googletag.pubads().setTargeting("ptype", "show_episode");
+
+
+		googletag.pubads().setTargeting("vguid", TV_GUID);
+		googletag.pubads().addEventListener('slotRenderEnded', adCallBack);
+        if (document.cookie.indexOf('il_geo')!=-1 && typeof I11C != "undefined") {
+            if (I11C.Morph == 1){
+                var geo_cookie = $.cookie('il_geo');
+                geo_cookie = geo_cookie.replace(/\+/g, " ");
+                geo_cookie = JSON.parse(geo_cookie);
+                if (geo_cookie.country_code && geo_cookie.postal_code){
+                    googletag.pubads().setLocation(geo_cookie.postal_code + ", " + geo_cookie.country_code);
+                }
+            }
+        }
+		googletag.CBSiaddPageView();
+		googletag.pubads().enableAsyncRendering();
+		googletag.pubads().enableSingleRequest();
+		googletag.pubads().collapseEmptyDivs(true,true);
+		googletag.enableServices();
+	});
+</script>
+
+<script type="text/javascript">
+    /*-----------------------------------------------------------------------------------------------------
+      Scroll refresh handling for DFP ads
+      ------------------------------------------------------------------------------------------------------*/
+	var dfp_scroll_timer = null;
+
+	$(document).ready(function() {
+		if ($("#mpu_bottom").length != 0 || $("#leader_bottom").length != 0){
+			window.onscroll = function(e) {
+				if (!dfp_scroll_timer){
+					dfp_scroll_timer = setTimeout(dfp_swap_ad, 30000);
+				}
+			}
+		}
+
+	});
+
+	function dfp_refresh_mpu_top() {
+		if ($("#mpu_top").length != 0){
+			googletag.cmd.push(function() {
+				if (typeof index_headertag_lightspeed !== 'undefined') {
+					var cb = (function (slots) {
+						return function () {
+							index_headertag_lightspeed.set_slot_targeting(slots);
+							googletag.pubads().refresh(slots);
+						};
+					})([window.mpu_top]);
+					index_headertag_lightspeed.add_session_end_hook(cb, true);
+					index_headertag_lightspeed.refresh();
+				} else {
+					googletag.pubads().refresh([window.mpu_top]);
+				}
+			});
+		}
+	};
+
+	function dfp_swap_ad() {
+		clearTimeout(dfp_scroll_timer);
+		dfp_scroll_timer = null;
+		if ($("#mpu_bottom").length != 0){
+			googletag.cmd.push(function() {
+				if (typeof index_headertag_lightspeed !== 'undefined') {
+					var cb = (function (slots) {
+						return function () {
+							index_headertag_lightspeed.set_slot_targeting(slots);
+							googletag.pubads().refresh(slots);
+						};
+					})([window.mpu_bottom]);
+					index_headertag_lightspeed.add_session_end_hook(cb, true);
+					index_headertag_lightspeed.refresh();
+				} else {
+					googletag.pubads().refresh([window.mpu_bottom]);
+				}
+			});
+		}
+		if ($("#leader_bottom").length != 0){
+			setTimeout(function(){
+				googletag.cmd.push(function() {
+					if (typeof index_headertag_lightspeed !== 'undefined') {
+						var cb = (function (slots) {
+							return function () {
+								index_headertag_lightspeed.set_slot_targeting(slots);
+								googletag.pubads().refresh(slots);
+							};
+						})([window.leader_bottom]);
+						index_headertag_lightspeed.add_session_end_hook(cb, true);
+						index_headertag_lightspeed.refresh();
+					} else {
+						googletag.pubads().refresh([window.leader_bottom]);
+					}
+				});
+			}, 1000);
+		}
+	};
+</script>
+
+
+
+
+
+		<script>
+	var _gaq = _gaq || [];
+
+	// for tv.com
+	_gaq.push(['_setAccount', 'UA-6619349-1']);
+	_gaq.push(['_setDomainName', 'tv.com']);
+	_gaq.push(['_trackPageview']);
+
+	// ...and again for CBS
+	_gaq.push(['nT._setAccount', 'UA-27653683-1']);
+	_gaq.push(['nT._setDomainName', 'tv.com']);
+	_gaq.push(['nT._setAllowLinker', true]);
+	_gaq.push(['nT._setSampleRate', '1']);
+	_gaq.push(['nT._trackPageview']);
+</script>
+
+
+
+
+<script type="text/javascript">
+	var utag_data = {
+		"deviceType":"desktop",
+		"isDev":"0",
+		"siteEdition": "us",
+		"siteHier": "shows|farscape|episodes",
+		"siteSection": "shows",
+		"siteType":"desktop web",
+		"pageFindingMethod": "Direct",
+		"pageType": "show_episode",
+		"pageViewGuid": TV_GUID,
+		"userId": "",
+		"userState":"not authenticated",
+		"userType":"anon",
+		"bkPath":"/shows/action-and-adventure",
+
+
+
+
+
+
+
+
+
+
+			"showId": "tv-show-1029",
+			"showTitle": "Farscape",
+
+
+
+
+
+
+
+
+
+
+	};
+</script>
+
+
+<script type="text/javascript">
+    window.cbsoptanon.onScriptsReady(function(cmp) {
+        cmp.ot.awaitInitialConsent(function() {
+            (function(a,b,c,d){
+                a='//tags.tiqcdn.com/utag/cbsi/tvcomsite/prod/utag.js';
+                b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+                a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+            })();
+        });
+    });
+</script>
+
+
+
+
+
+
+		<script type="text/javascript">
+    window._taboola = window._taboola || [];
+    function loadVendorTaboola() {
+        _taboola.push({ other:'auto' });
+        !function (e, f, u) {
+            e.async = 1;
+            e.src = u;
+            f.parentNode.insertBefore(e, f);
+        }(document.createElement('script'),
+            document.getElementsByTagName('script')[0],
+            '//cdn.taboola.com/libtrc/cbsinteractive-tvcom/loader.js');
+    }
+</script>
+
+
+
+        <script type="text/javascript">
+            function loadVendorViglink(){
+                var vglnk = { key: 'c3bb6258cc707b75970b1d18b9f32a06' };
+                (function(d, t){
+                     var s = d.createElement(t); s.type = 'text/javascript'; s.async = true; s.src = '//cdn.viglink.com/api/vglnk.js'; var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+                 }(document, 'script'));
+            }
+        </script>
+
+
+</head>
+<body class="us  ">
+	<div id="page_token" style="display:none" data-value="rwybmlmhAuulmmycw"></div>
+	<div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='cacdae3881061464181ceeca690d7292' /></div>
+
+
+<div class="m header_bar">
+
+	<div class="over_the_top_ad_wrapper">
+
+
+	<div id="omnibar_top" >
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+				if(typeof index_headertag_lightspeed !== 'undefined') {
+					index_headertag_lightspeed.add_session_end_hook(function(){
+						var slots = googletag.pubads().getSlots();
+						index_headertag_lightspeed.set_slot_targeting(slots);
+						googletag.display("omnibar_top");
+					}, true);
+					index_headertag_lightspeed.refresh();
+				} else {
+					googletag.display("omnibar_top");
+				}
+			});
+		</script>
+	</div>
+
+
+	</div>
+
+    <div class="content">
+		<div class="header_item logo right_shadow">
+			<a href="/" class="tvcom_logo">
+				<img src="/public/images/tvcom_logos/TVcomLogoUS.png">
+			</a>
+		</div>
+		<div class="header_item search">
+			<div class="m search_box suggest ">
+				<form action="/search" method="GET" name="search_form" class="search_form">
+					<input id="tv_search_head"
+					type="text"
+					class=""
+					name="q"
+					value="Search TV Shows and People"
+					defaultValue="Search TV Shows and People"
+					autocomplete="off" />
+					<button class="submit" type="submit">Search</button>
+				</form>
+				<span class="search_icon icon-search"></span>
+			</div>
+		</div>
+		<div class="header_item nav left_shadow">
+			<ul class="site_nav">
+				<li><a href="http://www.tv.com/shows/">Shows</a></li>
+				<li><a  href="http://www.tv.com/news/">News</a></li>
+				<li><a href="http://www.tv.com/community/">Community</a></li>
+
+				<li class="hideable"><a href="http://www.tv.com/listings/">Listings</a></li>
+
+				<li class="hideable"><a href="http://www.tv.com/people/">People</a></li>
+				<li class="nav_more">
+					<a href="#">More</a>
+				</li>
+			</ul>
+			<ul class="more_site_nav">
+
+				<li><a href="http://www.tv.com/listings/">Listings</a></li>
+
+				<li><a href="http://www.tv.com/people/">People</a></li>
+			</ul>
+		</div>
+		<div class="header_item userland left_shadow">
+
+			<div class="text_button">
+				<a rel="nofollow" id="login_link" class="login" href="https://secure.tv.com/account/login?returnto=http://www.tv.com/shows/farscape/episodes/">Login</a>
+			</div>
+			<div class="text_button">
+				<a rel="nofollow" id="signup_link" class="join"  href="https://secure.tv.com/account/signup?returnto=http://www.tv.com/shows/farscape/episodes/">Join</a>
+			</div>
+
+		</div>
+	</div>
+</div>
+<div class="m tv_header_spacer"></div>
+
+    <!--[if lt IE 9]>
+<div class="m alert">
+	<h2>We're sorry we had to press the pause button, but you are
+		using an unsupported browser.</h2>
+	<p>For the fully loaded tv.com experience, please upgrade to the
+	latest version of one of the following browsers:</p>
+	<div class="browser_icons">
+	<a href="http://www.getfirefox.com" target="_blank">
+		<img src="http://static.tvtome.com/images/icons/browser_icons/35x35/firefox.png"
+		alt="Firefox">
+	</a>
+	<a href="http://www.apple.com/safari/download/" target="_blank">
+		<img src="http://static.tvtome.com/images/icons/browser_icons/35x35/safari.png"
+		alt="Safari">
+	</a>
+	<a href="http://www.google.com/chrome" target="_blank">
+		<img src="http://static.tvtome.com/images/icons/browser_icons/35x35/chrome.png"
+		alt="Chrome">
+	</a>
+	<a href="http://www.microsoft.com/windows/internet-explorer"
+		target="_blank">
+		<img src="http://static.tvtome.com/images/icons/browser_icons/35x35/ie.png"
+		alt="Internet Explorer">
+	</a>
+	</div>
+</div>
+<![endif]-->
+
+	<div id="mantle_skin" _skin>
+
+
+
+				<div class="top_ad_wrapper">
+
+
+<div id="headerleader" class="ad leader">
+
+	<div id="leader_plus_top" >
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+				if(typeof index_headertag_lightspeed !== 'undefined') {
+					index_headertag_lightspeed.add_session_end_hook(function(){
+						var slots = googletag.pubads().getSlots();
+						index_headertag_lightspeed.set_slot_targeting(slots);
+						googletag.display("leader_plus_top");
+					}, true);
+					index_headertag_lightspeed.refresh();
+				} else {
+					googletag.display("leader_plus_top");
+				}
+			});
+		</script>
+	</div>
+
+</div>
+
+
+				</div>
+
+
+
+
+
+
+					<div class="_skin_ad_wrapper">
+
+
+	<div id="skin" >
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+				if(typeof index_headertag_lightspeed !== 'undefined') {
+					index_headertag_lightspeed.add_session_end_hook(function(){
+						var slots = googletag.pubads().getSlots();
+						index_headertag_lightspeed.set_slot_targeting(slots);
+						googletag.display("skin");
+					}, true);
+					index_headertag_lightspeed.refresh();
+				} else {
+					googletag.display("skin");
+				}
+			});
+		</script>
+	</div>
+
+
+					</div>
+
+
+
+
+		<div>
+			<div class="_bento">
+
+<div class="_mpu_grid _clearfix">
+
+
+<div class="m show_head">
+
+		<h1 data-name="Farscape" itemprop="name">Farscape</h1>
+
+	<div class="buttons">
+		<div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='cacdae3881061464181ceeca690d7292' /></div>
+
+
+
+
+
+<div class="m fave_box">
+	<div class="item " data-id="s:2519" data-type="" data-title="" data-url="" data-image="" data-thumb="">
+	<div class="fave_buttons">
+		<div class="fave text_button " title="Follow this item">
+			<div class="icon-star"></div>
+			<span class="txt">Follow</span>
+		</div>
+		<div class="_add_to_list arrow arrow_text_button" title="Add this item to a List"></div>
+		</div>
+	</div>
+	<img src="/public/images/lists/ajax-loader-blue.gif" class="_hidden">
+</div>
+
+
+	</div>
+
+	<div class="tagline">Syfy (ended 2004)</div>
+
+
+
+<div class="m editor_highlight _clearfix">
+
+
+
+			<div class="editor_info">
+				<p class="role">USER EDITOR</p>
+				<a href="/users/wisepop/" class="editor_name">wisepop</a>
+
+				<p class="editor_score">&nbsp;</p>
+
+				<a href="/users/wisepop/" class="_image_container">
+					<div class="mask">
+						<img src="http://tv-avatar-prod.s3.amazonaws.com/wisepop.jpg" class="force_scale editor_image">
+					</div>
+				</a>
+			</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<ul class="_nav_tabs narrow">
+		<li>
+			<a href="/shows/farscape/">Overview</a>
+		</li>
+		<li class="selected">
+			<a href="/shows/farscape/episodes/">Episode Guide</a>
+		</li>
+		<li>
+			<a href="/shows/farscape/watch/">Watch Online</a>
+		</li>
+		<li>
+			<a href="/shows/farscape/cast/">Cast &amp; Crew</a>
+		</li>
+
+		<li>
+			<a href="/shows/farscape/community/">Community</a>
+		</li>
+
+		<li>
+			<a href="/shows/farscape/reviews/">Fan Reviews</a>
+		</li>
+		<li>
+			<a href="/shows/farscape/news/">News</a>
+		</li>
+		<li>
+			<a href="/shows/farscape/photos/">Photos</a>
+		</li>
+		<li>
+			<a href="/shows/farscape/trivia/">Trivia</a>
+		</li>
+	</ul>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="_col_a">
+		<div class="m ep_guide">
+
+<div class="m featured_providers">
+
+
+
+
+			<a href="http://www.hulu.com/start/cbsi?cmp=5966" target="_blank" class="provider_button tvt_click hulu" rel="nofollow" data-tvt_leadtype="Buy" data-tvt_merchantname="Hulu" data-tvt_page="show_episode" data-tvt_mediaid="1029" data-tvt_mediatitle="Farscape" data-tvt_show_only="true">
+				<div class="provider hulu">
+					<span class="provider_title">Watch Farscape now on</span>
+					<img class="provider_logo" src="/public/images/hulu_logo.png" alt="Hulu logo">
+				</div>
+			</a>
+
+
+
+</div>
+
+		</div>
+
+		<div class="m display_controls ep_guide _standard_module all_expanded">
+			<h2>Episode Guide</h2>
+			<div class="edit_buttons">
+				<a class="_button" rel="nofollow" href="/shows/farscape/episodes/?printable=1">Printable</a>
+
+			</div>
+			<div class="controls">
+				<form action="/shows/farscape/episodes/all/" method="GET"  class="search_form" data-autosearch-min-chars="3">
+					<input  type="text" name="q" value="Find Episodes" data-default-value="Find Episodes" autocomplete="off" />
+					<div class="submit">&nbsp;</div>
+					<div class="kill">kill</div>
+				</form>
+				<ul class="_sort_em_dropdown">
+					<li class="selected">
+						<a data-sortmode="newest" href="/shows/farscape/episodes/all/">Newest First</a>
+					</li>
+					<li >
+						<a data-sortmode="oldest" href="/shows/farscape/episodes/all/?sortmode=oldest">Oldest First</a>
+					</li>
+					<li >
+						<a data-sortmode="rating" href="/shows/farscape/episodes/all/?sortmode=rating">Rating</a>
+					</li>
+				</ul>
+				<div class="arrow_sprite"></div>
+
+				<a class="expand_all" title="Expand All"></a>
+				<a class="collapse_all" title="Collapse All"></a>
+			</div>
+		</div>
+		<div class="_col_a1">
+			<div class="m season_filter _filter_navigation">
+				<h3>FILTER BY SEASON</h3>
+				<ul class="filters"   data-filter-target=".m.episode_list" data-refresh-ads="1">
+					<li class="filter selected">
+						<a class="all" href="/shows/farscape/episodes/"><strong>All</strong></a>
+					</li>
+
+						<li class="filter " data-season="5">
+							<a href="/shows/farscape/season-5/">
+								<strong>Season 5</strong> (2)
+							</a>
+						</li>
+
+						<li class="filter " data-season="4">
+							<a href="/shows/farscape/season-4/">
+								<strong>Season 4</strong> (22)
+							</a>
+						</li>
+
+						<li class="filter " data-season="3">
+							<a href="/shows/farscape/season-3/">
+								<strong>Season 3</strong> (22)
+							</a>
+						</li>
+
+						<li class="filter " data-season="2">
+							<a href="/shows/farscape/season-2/">
+								<strong>Season 2</strong> (22)
+							</a>
+						</li>
+
+						<li class="filter " data-season="1">
+							<a href="/shows/farscape/season-1/">
+								<strong>Season 1</strong> (22)
+							</a>
+						</li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="_col_a2">
+			<div class="m episode_list  _standard_module all_expanded">
+
+					<ul class="seasons _toggle_list">
+
+							<li class="season toggled" data-season="5">
+
+								<a class="season_name toggle" href="/shows/farscape/season-5/?expanded=1" data-ajax-target="#season-5-eps">
+									Season 5
+								</a>
+
+								<ul class="episodes _toggle_list" id="season-5-eps">
+								<li class="episode _clearfix"><div class="no_toggle_watch"><a href="/shows/farscape/the-peacekeeper-wars-2-367768/"><img class="thumb" src="http://img2.tvtome.com/i/tve/em/367768.jpg" alt="The Peacekeeper Wars (2)"/></a></div><div class="no_toggle_wrapper _clearfix"><div class="no_toggle _clearfix"><div class="no_toggle_left"><a class="title"href="/shows/farscape/the-peacekeeper-wars-2-367768/">The Peacekeeper Wars (2)</a><br><div class="ep_info">
+
+							Episode 2
+
+					</div></div><div class="no_toggle_right _clearfix"><div class="date">10/18/04</div><div class="_rating" style="background-color:#69cb02;">9.7</div></div></div><div class="description"><p>With Sikozu's help, everyone manages to escape from the Scarran prison. Joining up with D'Argo, Jothee, Chiana and other Luxans they cripple and leave the Scarran ship and return to <em>Moya</em>.<br /><br />Crichton returns to the wormhole where he gets Einstein to give him the ability to build a wormhole weapon.</p></div></div></li><li class="episode _clearfix"><div class="no_toggle_watch"><a href="/shows/farscape/the-peacekeeper-wars-1-341399/"><img class="thumb" src="http://img2.tvtome.com/i/tve/em/341399.jpg" alt="The Peacekeeper Wars (1)"/></a></div><div class="no_toggle_wrapper _clearfix"><div class="no_toggle _clearfix"><div class="no_toggle_left"><a class="title"href="/shows/farscape/the-peacekeeper-wars-1-341399/">The Peacekeeper Wars (1)</a><br><div class="ep_info">
+
+							Episode 1
+
+					</div></div><div class="no_toggle_right _clearfix"><div class="date">10/17/04</div><div class="_rating" style="background-color:#69cb02;">9.6</div></div></div><div class="description"><span class='_more_less'><p>Sixty days after they were disintegrated, Rygel retrieves the pieces of John and Aeryn from the sea bed. The Diagnosian recrystallizes them and they start getting to know the people who live on that world.<br /    ><br /    >Meanwhile, Scorpius and Sikozu are aboard<span class="_hidden">&nbsp;a Peacekeeper Command Carrier on a recon mission. But when Scorpius realizes that Crichton has returned, renewing the possibility of creating a wormhole weapon to defeat the Scarrans permanently, he leaves his post to find Crichton.</span></p><span class="_more">more</span><span class="_less">less</span></span></div></div></li></ul>
+							</li>
+
+							<li class="season " data-season="4">
+
+								<a class="season_name toggle" href="/shows/farscape/season-4/?expanded=1" data-ajax-target="#season-4-eps">
+									Season 4
+								</a>
+
+								<ul class="episodes _toggle_list" id="season-4-eps">
+								</ul>
+							</li>
+
+							<li class="season " data-season="3">
+
+								<a class="season_name toggle" href="/shows/farscape/season-3/?expanded=1" data-ajax-target="#season-3-eps">
+									Season 3
+								</a>
+
+								<ul class="episodes _toggle_list" id="season-3-eps">
+								</ul>
+							</li>
+
+							<li class="season " data-season="2">
+
+								<a class="season_name toggle" href="/shows/farscape/season-2/?expanded=1" data-ajax-target="#season-2-eps">
+									Season 2
+								</a>
+
+								<ul class="episodes _toggle_list" id="season-2-eps">
+								</ul>
+							</li>
+
+							<li class="season " data-season="1">
+
+								<a class="season_name toggle" href="/shows/farscape/season-1/?expanded=1" data-ajax-target="#season-1-eps">
+									Season 1
+								</a>
+
+								<ul class="episodes _toggle_list" id="season-1-eps">
+								</ul>
+							</li>
+
+					</ul>
+
+				<input type="hidden" name="episode_page_url" value="/shows/farscape/episodes/"/>
+			</div>
+
+			<div class="_standard_module">
+
+
+<div id="taboola-bottom-page-thumbnails"></div>
+<script type="text/javascript">
+	window._taboola = window._taboola || [];
+	_taboola.push({
+		mode: 'alternating-thumbnails-b',
+		container: 'taboola-bottom-page-thumbnails',
+		placement: 'Bottom Page Thumbnails show_episode Desktop',
+		target_type: 'mix'
+	});
+</script>
+
+
+			</div>
+		</div>
+	</div><!-- / col_a -->
+
+	<div class="_col_b">
+		<div class="m mpu_placeholder">
+
+
+	<div id="mpu_top" >
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+				if(typeof index_headertag_lightspeed !== 'undefined') {
+					index_headertag_lightspeed.add_session_end_hook(function(){
+						var slots = googletag.pubads().getSlots();
+						index_headertag_lightspeed.set_slot_targeting(slots);
+						googletag.display("mpu_top");
+					}, true);
+					index_headertag_lightspeed.refresh();
+				} else {
+					googletag.display("mpu_top");
+				}
+			});
+		</script>
+	</div>
+
+
+		</div>
+
+
+
+
+            <div class="m trending_shows _standard_module box" id="trending_shows">
+    <div class="header">
+	<h2>New & Noteworthy</h2>
+    </div>
+    <ul class="stories">
+
+
+                    <li class="story medium_144x80_img _clearfix i_1 ">
+                    <div class="left_info">
+                        <div class="_image_container">
+                            <a href="/shows/philip-k-dicks-electric-dreams/" class="mask">
+                                <img src="http://img2.tvtome.com/i/tvp/sm/204555.jpg" alt="{U&#39;Airdayofweek&#39;: 0, U&#39;Latestupdate&#39;: 1538657715, U&#39;Imagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Ss/204555.Jpg&#39;, U&#39;Globalratingvotes&#39;: 30, U&#39;Statustypeid&#39;: 50, U&#39;Numepisodesfree&#39;: 0, U&#39;Canonurl&#39;: U&#39;/Tv/Philip-K-Dicks-Electric-Dreams&#39;, U&#39;Networkfekey&#39;: U&#39;N:3001&#39;, U&#39;Globalratingvotespositive&#39;: 0, U&#39;Fekey&#39;: U&#39;S:204555&#39;, U&#39;Originalairdate&#39;: 1515715200, U&#39;Tvg&#39;: {U&#39;Url&#39;: U&#39;Http://Www.Tvguide.Com/Shows/Philip-K-Dicks-Electric-Dreams-1040415/&#39;, U&#39;Type&#39;: 1, U&#39;Id&#39;: U&#39;1040415&#39;, U&#39;Rovi1&#39;: U&#39;32295046&#39;, U&#39;Rovi2&#39;: U&#39;4563630438&#39;}, U&#39;Name&#39;: U&quot;Philip K. Dick&#39;s Electric Dreams&quot;, U&#39;Mediatypeid&#39;: 1, U&#39;Imagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Sm/204555.Jpg&#39;, U&#39;Pw&#39;: 142990, U&#39;Globalratingvotesneutral&#39;: 0, U&#39;Startday&#39;: 12, U&#39;Episodes&#39;: [], U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/3001.Png&#39;, U&#39;Airtime&#39;: U&#39;&#39;, U&#39;Textid&#39;: U&#39;Philip-K-Dicks-Electric-Dreams&#39;, U&#39;Numepisodespaid&#39;: 1, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/3001.Png&#39;, U&#39;Originalnetworkid&#39;: 3001, U&#39;Networkid&#39;: 3001, U&#39;Mediatypename&#39;: U&#39;Tv&#39;, U&#39;Numepisodesavailable&#39;: 1, U&#39;Globalratingvotesnegative&#39;: 0, U&#39;Startyear&#39;: 2018, U&#39;Url&#39;: U&#39;/Shows/Philip-K-Dicks-Electric-Dreams/&#39;, U&#39;Endday&#39;: 0, U&#39;Lastairdate&#39;: 1516492800, U&#39;Startmonth&#39;: 1, U&#39;Clickerid&#39;: 0, U&#39;Endyear&#39;: 0, U&#39;Numepisode&#39;: 8, U&#39;Matchtype&#39;: U&#39;Show&#39;, U&#39;Endmonth&#39;: 0, U&#39;Pww&#39;: 143101, U&#39;Status&#39;: U&#39;Unknown&#39;, U&#39;Networktextid&#39;: U&#39;Prime-Video&#39;, U&#39;Fulltextid&#39;: U&#39;Tv:Philip-K-Dicks-Electric-Dreams&#39;, U&#39;Viewergender&#39;: U&#39;None&#39;, U&#39;Showrating&#39;: U&#39;Not Available&#39;, U&#39;Networks&#39;: [{U&#39;Networkid&#39;: 1984, U&#39;Networktextid&#39;: U&#39;Amazon&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/1984.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:1984&#39;, U&#39;Networkname&#39;: U&#39;Amazon Instant Video&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/1984.Png&#39;}, {U&#39;Networkid&#39;: 2986, U&#39;Networktextid&#39;: U&#39;Iva&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/2986.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:2986&#39;, U&#39;Networkname&#39;: U&#39;Iva&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/2986.Png&#39;}], U&#39;Pwd&#39;: 143192, U&#39;Imagelarge&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Gl/204555.Jpg&#39;, U&#39;Pwm&#39;: 143334, U&#39;Networkname&#39;: U&#39;Prime Video&#39;, U&#39;Id&#39;: 204555, U&#39;Globalrating&#39;: 6.6699999999999999}"/>
+                            </a>
+                            <div class="counter">1</div>
+                        </div>
+                    </div>
+                    <div class="right_info">
+                        <div class="title">
+                            <a href="/shows/philip-k-dicks-electric-dreams/">
+                                <span class="show_title">
+                                    Philip K. Dick's Electric Dreams
+                                </span>
+                            </a>
+                        </div>
+                        <div class="network">
+                            Prime Video
+                        </div>
+                        <div class="links">
+                            <a href="/shows/philip-k-dicks-electric-dreams/cast/">Cast</a>
+                            | <a href="/shows/philip-k-dicks-electric-dreams/watch/">Watch</a>
+                        </div>
+                    </div>
+                    </li>
+
+
+
+                    <li class="story medium_144x80_img _clearfix i_2 ">
+                    <div class="left_info">
+                        <div class="_image_container">
+                            <a href="/shows/waco/" class="mask">
+                                <img src="http://img2.tvtome.com/i/tvp/sm/204531.jpg" alt="{U&#39;Airdayofweek&#39;: 4, U&#39;Latestupdate&#39;: 1555412798, U&#39;Imagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Ss/204531.Jpg&#39;, U&#39;Globalratingvotes&#39;: 13, U&#39;Statustypeid&#39;: 50, U&#39;Numepisodesfree&#39;: 0, U&#39;Canonurl&#39;: U&#39;/Tv/Waco&#39;, U&#39;Networkfekey&#39;: U&#39;N:3055&#39;, U&#39;Globalratingvotespositive&#39;: 0, U&#39;Fekey&#39;: U&#39;S:204531&#39;, U&#39;Originalairdate&#39;: 1516752000, U&#39;Tvg&#39;: {U&#39;Url&#39;: U&#39;Http://Www.Tvguide.Com/Shows/Waco-996021/&#39;, U&#39;Type&#39;: 1, U&#39;Id&#39;: U&#39;996021&#39;, U&#39;Rovi1&#39;: U&#39;31368846&#39;, U&#39;Rovi2&#39;: U&#39;4197941160&#39;}, U&#39;Name&#39;: U&#39;Waco&#39;, U&#39;Mediatypeid&#39;: 1, U&#39;Imagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Sm/204531.Jpg&#39;, U&#39;Pw&#39;: 74094, U&#39;Globalratingvotesneutral&#39;: 0, U&#39;Startday&#39;: 24, U&#39;Episodes&#39;: [], U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/3055.Png&#39;, U&#39;Airtime&#39;: U&#39;22:00:00&#39;, U&#39;Textid&#39;: U&#39;Waco&#39;, U&#39;Numepisodespaid&#39;: 6, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/3055.Png&#39;, U&#39;Originalnetworkid&#39;: 3055, U&#39;Networkid&#39;: 3055, U&#39;Mediatypename&#39;: U&#39;Tv&#39;, U&#39;Numepisodesavailable&#39;: 6, U&#39;Globalratingvotesnegative&#39;: 0, U&#39;Startyear&#39;: 2018, U&#39;Url&#39;: U&#39;/Shows/Waco/&#39;, U&#39;Endday&#39;: 0, U&#39;Lastairdate&#39;: 1519776000, U&#39;Startmonth&#39;: 1, U&#39;Clickerid&#39;: 0, U&#39;Endyear&#39;: 0, U&#39;Numepisode&#39;: 7, U&#39;Matchtype&#39;: U&#39;Show&#39;, U&#39;Endmonth&#39;: 0, U&#39;Pww&#39;: 116750, U&#39;Status&#39;: U&#39;Mini-Series&#39;, U&#39;Networktextid&#39;: U&#39;Paramount-Network&#39;, U&#39;Fulltextid&#39;: U&#39;Tv:Waco&#39;, U&#39;Viewergender&#39;: U&#39;None&#39;, U&#39;Showrating&#39;: U&#39;Not Available&#39;, U&#39;Networks&#39;: [{U&#39;Networkid&#39;: 1984, U&#39;Networktextid&#39;: U&#39;Amazon&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/1984.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:1984&#39;, U&#39;Networkname&#39;: U&#39;Amazon Instant Video&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/1984.Png&#39;}, {U&#39;Networkid&#39;: 2986, U&#39;Networktextid&#39;: U&#39;Iva&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/2986.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:2986&#39;, U&#39;Networkname&#39;: U&#39;Iva&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/2986.Png&#39;}, {U&#39;Networkid&#39;: 232, U&#39;Networktextid&#39;: U&#39;Itunes&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/232.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:232&#39;, U&#39;Networkname&#39;: U&#39;Itunes&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/232.Png&#39;}, {U&#39;Networkid&#39;: 2806, U&#39;Networktextid&#39;: U&#39;Vudu&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/2806.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:2806&#39;, U&#39;Networkname&#39;: U&#39;Vudu&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/2806.Png&#39;}], U&#39;Pwd&#39;: 117175, U&#39;Imagelarge&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Gl/204531.Jpg&#39;, U&#39;Pwm&#39;: 117481, U&#39;Networkname&#39;: U&#39;Paramount Network&#39;, U&#39;Id&#39;: 204531, U&#39;Globalrating&#39;: 5.96}"/>
+                            </a>
+                            <div class="counter">2</div>
+                        </div>
+                    </div>
+                    <div class="right_info">
+                        <div class="title">
+                            <a href="/shows/waco/">
+                                <span class="show_title">
+                                    Waco
+                                </span>
+                            </a>
+                        </div>
+                        <div class="network">
+                            Paramount Network
+                        </div>
+                        <div class="links">
+                            <a href="/shows/waco/cast/">Cast</a>
+                            | <a href="/shows/waco/watch/">Watch</a>
+                        </div>
+                    </div>
+                    </li>
+
+
+
+                    <li class="story medium_144x80_img _clearfix i_3 ">
+                    <div class="left_info">
+                        <div class="_image_container">
+                            <a href="/shows/the-assassination-of-gianni-versace-american-crime-story/" class="mask">
+                                <img src="http://img2.tvtome.com/i/tvp/sm/204484.jpg" alt="{U&#39;Airdayofweek&#39;: 4, U&#39;Latestupdate&#39;: 1524358115, U&#39;Imagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Ss/204484.Jpg&#39;, U&#39;Globalratingvotes&#39;: 33, U&#39;Statustypeid&#39;: 50, U&#39;Numepisodesfree&#39;: 0, U&#39;Canonurl&#39;: U&#39;/Tv/The-Assassination-Of-Gianni-Versace-American-Crime-Story&#39;, U&#39;Networkfekey&#39;: U&#39;N:314&#39;, U&#39;Globalratingvotespositive&#39;: 0, U&#39;Fekey&#39;: U&#39;S:204484&#39;, U&#39;Originalairdate&#39;: 1516147200, U&#39;Tvg&#39;: {U&#39;Url&#39;: U&#39;Http://Www.Tvguide.Com/Shows/The-Assassination-Of-Gianni-Versace-American-Crime-Story-1040367/&#39;, U&#39;Type&#39;: 1, U&#39;Id&#39;: U&#39;1040367&#39;, U&#39;Rovi1&#39;: U&#39;32287820&#39;, U&#39;Rovi2&#39;: U&#39;4561032615&#39;}, U&#39;Name&#39;: U&#39;The Assassination Of Gianni Versace: American Crime Story&#39;, U&#39;Mediatypeid&#39;: 1, U&#39;Imagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Sm/204484.Jpg&#39;, U&#39;Pw&#39;: 140306, U&#39;Globalratingvotesneutral&#39;: 0, U&#39;Startday&#39;: 17, U&#39;Episodes&#39;: [], U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/314.Png&#39;, U&#39;Airtime&#39;: U&#39;22:00:00&#39;, U&#39;Textid&#39;: U&#39;The-Assassination-Of-Gianni-Versace-American-Crime-Story&#39;, U&#39;Numepisodespaid&#39;: 0, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/314.Png&#39;, U&#39;Originalnetworkid&#39;: 314, U&#39;Networkid&#39;: 314, U&#39;Mediatypename&#39;: U&#39;Tv&#39;, U&#39;Numepisodesavailable&#39;: 0, U&#39;Globalratingvotesnegative&#39;: 0, U&#39;Startyear&#39;: 2018, U&#39;Url&#39;: U&#39;/Shows/The-Assassination-Of-Gianni-Versace-American-Crime-Story/&#39;, U&#39;Endday&#39;: 0, U&#39;Lastairdate&#39;: 1521590400, U&#39;Startmonth&#39;: 1, U&#39;Clickerid&#39;: 0, U&#39;Endyear&#39;: 0, U&#39;Numepisode&#39;: 9, U&#39;Matchtype&#39;: U&#39;Show&#39;, U&#39;Endmonth&#39;: 0, U&#39;Pww&#39;: 140427, U&#39;Status&#39;: U&#39;In Season&#39;, U&#39;Networktextid&#39;: U&#39;Fx&#39;, U&#39;Fulltextid&#39;: U&#39;Tv:The-Assassination-Of-Gianni-Versace-American-Crime-Story&#39;, U&#39;Viewergender&#39;: U&#39;None&#39;, U&#39;Showrating&#39;: U&#39;Not Available&#39;, U&#39;Networks&#39;: [{U&#39;Networkid&#39;: 232, U&#39;Networktextid&#39;: U&#39;Itunes&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/232.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:232&#39;, U&#39;Networkname&#39;: U&#39;Itunes&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/232.Png&#39;}], U&#39;Pwd&#39;: 140514, U&#39;Imagelarge&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Gl/204484.Jpg&#39;, U&#39;Pwm&#39;: 142246, U&#39;Networkname&#39;: U&#39;Fx&#39;, U&#39;Id&#39;: 204484, U&#39;Globalrating&#39;: 7.5199999999999996}"/>
+                            </a>
+                            <div class="counter">3</div>
+                        </div>
+                    </div>
+                    <div class="right_info">
+                        <div class="title">
+                            <a href="/shows/the-assassination-of-gianni-versace-american-crime-story/">
+                                <span class="show_title">
+                                    The Assassination of Gianni Versace: American Crime Story
+                                </span>
+                            </a>
+                        </div>
+                        <div class="network">
+                            FX
+                        </div>
+                        <div class="links">
+                            <a href="/shows/the-assassination-of-gianni-versace-american-crime-story/cast/">Cast</a>
+                            | <a href="/shows/the-assassination-of-gianni-versace-american-crime-story/watch/">Watch</a>
+                        </div>
+                    </div>
+                    </li>
+
+
+
+                    <li class="story medium_144x80_img _clearfix i_4 ">
+                    <div class="left_info">
+                        <div class="_image_container">
+                            <a href="/shows/black-lightning/" class="mask">
+                                <img src="http://img2.tvtome.com/i/tvp/sm/203712.jpg" alt="{U&#39;Airdayofweek&#39;: 3, U&#39;Latestupdate&#39;: 1578420216, U&#39;Imagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Ss/203712.Jpg&#39;, U&#39;Globalratingvotes&#39;: 83, U&#39;Statustypeid&#39;: 50, U&#39;Numepisodesfree&#39;: 4, U&#39;Canonurl&#39;: U&#39;/Tv/Black-Lightning&#39;, U&#39;Networkfekey&#39;: U&#39;N:323&#39;, U&#39;Globalratingvotespositive&#39;: 0, U&#39;Fekey&#39;: U&#39;S:203712&#39;, U&#39;Originalairdate&#39;: 1516136400, U&#39;Tvg&#39;: {U&#39;Url&#39;: U&#39;Http://Www.Tvguide.Com/Shows/Black-Lightning-1035099/&#39;, U&#39;Type&#39;: 1, U&#39;Id&#39;: U&#39;1035099&#39;, U&#39;Rovi1&#39;: U&#39;32193389&#39;, U&#39;Rovi2&#39;: U&#39;4521901145&#39;}, U&#39;Name&#39;: U&#39;Black Lightning&#39;, U&#39;Mediatypeid&#39;: 1, U&#39;Imagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Sm/203712.Jpg&#39;, U&#39;Pw&#39;: 144284, U&#39;Globalratingvotesneutral&#39;: 0, U&#39;Startday&#39;: 16, U&#39;Episodes&#39;: [], U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/323.Png&#39;, U&#39;Airtime&#39;: U&#39;21:00:00&#39;, U&#39;Textid&#39;: U&#39;Black-Lightning&#39;, U&#39;Numepisodespaid&#39;: 30, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/323.Png&#39;, U&#39;Originalnetworkid&#39;: 323, U&#39;Networkid&#39;: 323, U&#39;Mediatypename&#39;: U&#39;Tv&#39;, U&#39;Numepisodesavailable&#39;: 31, U&#39;Globalratingvotesnegative&#39;: 0, U&#39;Startyear&#39;: 2018, U&#39;Url&#39;: U&#39;/Shows/Black-Lightning/&#39;, U&#39;Endday&#39;: 0, U&#39;Lastairdate&#39;: 1575849600, U&#39;Startmonth&#39;: 1, U&#39;Clickerid&#39;: 0, U&#39;Endyear&#39;: 0, U&#39;Numepisode&#39;: 40, U&#39;Matchtype&#39;: U&#39;Show&#39;, U&#39;Endmonth&#39;: 0, U&#39;Pww&#39;: 143903, U&#39;Status&#39;: U&#39;In Season&#39;, U&#39;Networktextid&#39;: U&#39;The-Cw&#39;, U&#39;Fulltextid&#39;: U&#39;Tv:Black-Lightning&#39;, U&#39;Viewergender&#39;: U&#39;None&#39;, U&#39;Showrating&#39;: U&#39;Not Available&#39;, U&#39;Networks&#39;: [{U&#39;Networkid&#39;: 1984, U&#39;Networktextid&#39;: U&#39;Amazon&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/1984.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:1984&#39;, U&#39;Networkname&#39;: U&#39;Amazon Instant Video&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/1984.Png&#39;}, {U&#39;Networkid&#39;: 323, U&#39;Networktextid&#39;: U&#39;The-Cw&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/323.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:323&#39;, U&#39;Networkname&#39;: U&#39;The Cw&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/323.Png&#39;}, {U&#39;Networkid&#39;: 232, U&#39;Networktextid&#39;: U&#39;Itunes&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/232.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:232&#39;, U&#39;Networkname&#39;: U&#39;Itunes&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/232.Png&#39;}, {U&#39;Networkid&#39;: 1943, U&#39;Networktextid&#39;: U&#39;Netflix&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/1943.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:1943&#39;, U&#39;Networkname&#39;: U&#39;Netflix&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/1943.Png&#39;}, {U&#39;Networkid&#39;: 2806, U&#39;Networktextid&#39;: U&#39;Vudu&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/2806.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:2806&#39;, U&#39;Networkname&#39;: U&#39;Vudu&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/2806.Png&#39;}], U&#39;Pwd&#39;: 143954, U&#39;Imagelarge&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Gl/203712.Jpg&#39;, U&#39;Pwm&#39;: 144696, U&#39;Networkname&#39;: U&#39;The Cw&#39;, U&#39;Id&#39;: 203712, U&#39;Globalrating&#39;: 6.9000000000000004}"/>
+                            </a>
+                            <div class="counter">4</div>
+                        </div>
+                    </div>
+                    <div class="right_info">
+                        <div class="title">
+                            <a href="/shows/black-lightning/">
+                                <span class="show_title">
+                                    Black Lightning
+                                </span>
+                            </a>
+                        </div>
+                        <div class="network">
+                            The CW
+                        </div>
+                        <div class="links">
+                            <a href="/shows/black-lightning/cast/">Cast</a>
+                            | <a href="/shows/black-lightning/watch/">Watch</a>
+                        </div>
+                    </div>
+                    </li>
+
+
+
+                    <li class="story medium_144x80_img _clearfix i_5 ">
+                    <div class="left_info">
+                        <div class="_image_container">
+                            <a href="/shows/corporate/" class="mask">
+                                <img src="http://img2.tvtome.com/i/tvp/sm/204657.jpg" alt="{U&#39;Airdayofweek&#39;: 4, U&#39;Latestupdate&#39;: 1555412790, U&#39;Imagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Ss/204657.Jpg&#39;, U&#39;Globalratingvotes&#39;: 11, U&#39;Statustypeid&#39;: 50, U&#39;Numepisodesfree&#39;: 1, U&#39;Canonurl&#39;: U&#39;/Tv/Corporate&#39;, U&#39;Networkfekey&#39;: U&#39;N:226&#39;, U&#39;Globalratingvotespositive&#39;: 0, U&#39;Fekey&#39;: U&#39;S:204657&#39;, U&#39;Originalairdate&#39;: 1516147200, U&#39;Tvg&#39;: {U&#39;Url&#39;: U&#39;Http://Www.Tvguide.Com/Shows/Corporate-1059222/&#39;, U&#39;Type&#39;: 1, U&#39;Id&#39;: U&#39;1059222&#39;, U&#39;Rovi1&#39;: U&#39;32725973&#39;, U&#39;Rovi2&#39;: U&#39;4767325296&#39;}, U&#39;Name&#39;: U&#39;Corporate&#39;, U&#39;Mediatypeid&#39;: 1, U&#39;Imagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Sm/204657.Jpg&#39;, U&#39;Pw&#39;: 141823, U&#39;Globalratingvotesneutral&#39;: 0, U&#39;Startday&#39;: 17, U&#39;Episodes&#39;: [], U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/226.Png&#39;, U&#39;Airtime&#39;: U&#39;22:00:00&#39;, U&#39;Textid&#39;: U&#39;Corporate&#39;, U&#39;Numepisodespaid&#39;: 20, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/226.Png&#39;, U&#39;Originalnetworkid&#39;: 226, U&#39;Networkid&#39;: 226, U&#39;Mediatypename&#39;: U&#39;Tv&#39;, U&#39;Numepisodesavailable&#39;: 20, U&#39;Globalratingvotesnegative&#39;: 0, U&#39;Startyear&#39;: 2018, U&#39;Url&#39;: U&#39;/Shows/Corporate/&#39;, U&#39;Endday&#39;: 0, U&#39;Lastairdate&#39;: 1552348800, U&#39;Startmonth&#39;: 1, U&#39;Clickerid&#39;: 0, U&#39;Endyear&#39;: 0, U&#39;Numepisode&#39;: 24, U&#39;Matchtype&#39;: U&#39;Show&#39;, U&#39;Endmonth&#39;: 0, U&#39;Pww&#39;: 142039, U&#39;Status&#39;: U&#39;In Season&#39;, U&#39;Networktextid&#39;: U&#39;Comedy-Central&#39;, U&#39;Fulltextid&#39;: U&#39;Tv:Corporate&#39;, U&#39;Viewergender&#39;: U&#39;None&#39;, U&#39;Showrating&#39;: U&#39;Not Available&#39;, U&#39;Networks&#39;: [{U&#39;Networkid&#39;: 1984, U&#39;Networktextid&#39;: U&#39;Amazon&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/1984.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:1984&#39;, U&#39;Networkname&#39;: U&#39;Amazon Instant Video&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/1984.Png&#39;}, {U&#39;Networkid&#39;: 226, U&#39;Networktextid&#39;: U&#39;Comedy-Central&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/226.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:226&#39;, U&#39;Networkname&#39;: U&#39;Comedy Central&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/226.Png&#39;}, {U&#39;Networkid&#39;: 2986, U&#39;Networktextid&#39;: U&#39;Iva&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/2986.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:2986&#39;, U&#39;Networkname&#39;: U&#39;Iva&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/2986.Png&#39;}, {U&#39;Networkid&#39;: 232, U&#39;Networktextid&#39;: U&#39;Itunes&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/232.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:232&#39;, U&#39;Networkname&#39;: U&#39;Itunes&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/232.Png&#39;}, {U&#39;Networkid&#39;: 2806, U&#39;Networktextid&#39;: U&#39;Vudu&#39;, U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/2806.Png&#39;, U&#39;Networkfekey&#39;: U&#39;N:2806&#39;, U&#39;Networkname&#39;: U&#39;Vudu&#39;, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/2806.Png&#39;}], U&#39;Pwd&#39;: 142081, U&#39;Imagelarge&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Gl/204657.Jpg&#39;, U&#39;Pwm&#39;: 113634, U&#39;Networkname&#39;: U&#39;Comedy Central&#39;, U&#39;Id&#39;: 204657, U&#39;Globalrating&#39;: 5.5499999999999998}"/>
+                            </a>
+                            <div class="counter">5</div>
+                        </div>
+                    </div>
+                    <div class="right_info">
+                        <div class="title">
+                            <a href="/shows/corporate/">
+                                <span class="show_title">
+                                    Corporate
+                                </span>
+                            </a>
+                        </div>
+                        <div class="network">
+                            Comedy Central
+                        </div>
+                        <div class="links">
+                            <a href="/shows/corporate/cast/">Cast</a>
+                            | <a href="/shows/corporate/watch/">Watch</a>
+                        </div>
+                    </div>
+                    </li>
+
+
+
+                    <li class="story medium_144x80_img _clearfix i_6 last_child">
+                    <div class="left_info">
+                        <div class="_image_container">
+                            <a href="/shows/the-four-battle-for-stardom/" class="mask">
+                                <img src="http://img2.tvtome.com/i/tvp/sm/204554.jpg" alt="{U&#39;Airdayofweek&#39;: 5, U&#39;Latestupdate&#39;: 1531949708, U&#39;Imagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Ss/204554.Jpg&#39;, U&#39;Globalratingvotes&#39;: 11, U&#39;Statustypeid&#39;: 50, U&#39;Numepisodesfree&#39;: 0, U&#39;Canonurl&#39;: U&#39;/Tv/The-Four-Battle-For-Stardom&#39;, U&#39;Networkfekey&#39;: U&#39;N:152&#39;, U&#39;Globalratingvotespositive&#39;: 0, U&#39;Fekey&#39;: U&#39;S:204554&#39;, U&#39;Originalairdate&#39;: 1515024000, U&#39;Tvg&#39;: {U&#39;Url&#39;: U&#39;Http://Www.Tvguide.Com/Shows/The-Four-1099048/&#39;, U&#39;Type&#39;: 1, U&#39;Id&#39;: U&#39;1099048&#39;, U&#39;Rovi1&#39;: U&#39;33549607&#39;, U&#39;Rovi2&#39;: U&#39;5152129695&#39;}, U&#39;Name&#39;: U&#39;The Four: Battle For Stardom&#39;, U&#39;Mediatypeid&#39;: 1, U&#39;Imagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Sm/204554.Jpg&#39;, U&#39;Pw&#39;: 142697, U&#39;Globalratingvotesneutral&#39;: 0, U&#39;Startday&#39;: 4, U&#39;Episodes&#39;: [], U&#39;Networkimagemedium&#39;: U&#39;Http://Img2.Tvtome.Com/I/Na/152.Png&#39;, U&#39;Airtime&#39;: U&#39;20:00:00&#39;, U&#39;Textid&#39;: U&#39;The-Four-Battle-For-Stardom&#39;, U&#39;Numepisodespaid&#39;: 0, U&#39;Networkimagesmall&#39;: U&#39;Http://Img2.Tvtome.Com/I/Ns/152.Png&#39;, U&#39;Originalnetworkid&#39;: 152, U&#39;Networkid&#39;: 152, U&#39;Mediatypename&#39;: U&#39;Tv&#39;, U&#39;Numepisodesavailable&#39;: 0, U&#39;Globalratingvotesnegative&#39;: 0, U&#39;Startyear&#39;: 2018, U&#39;Url&#39;: U&#39;/Shows/The-Four-Battle-For-Stardom/&#39;, U&#39;Endday&#39;: 0, U&#39;Lastairdate&#39;: 1533168000, U&#39;Startmonth&#39;: 1, U&#39;Clickerid&#39;: 0, U&#39;Endyear&#39;: 0, U&#39;Numepisode&#39;: 14, U&#39;Matchtype&#39;: U&#39;Show&#39;, U&#39;Endmonth&#39;: 0, U&#39;Pww&#39;: 142827, U&#39;Status&#39;: U&quot;Hasn&#39;t Aired&quot;, U&#39;Networktextid&#39;: U&#39;Fox&#39;, U&#39;Fulltextid&#39;: U&#39;Tv:The-Four-Battle-For-Stardom&#39;, U&#39;Viewergender&#39;: U&#39;None&#39;, U&#39;Showrating&#39;: U&#39;Not Available&#39;, U&#39;Networks&#39;: [], U&#39;Pwd&#39;: 142918, U&#39;Imagelarge&#39;: U&#39;Http://Img2.Tvtome.Com/I/Tvp/Gl/204554.Jpg&#39;, U&#39;Pwm&#39;: 141283, U&#39;Networkname&#39;: U&#39;Fox&#39;, U&#39;Id&#39;: 204554, U&#39;Globalrating&#39;: 3.3599999999999999}"/>
+                            </a>
+                            <div class="counter">6</div>
+                        </div>
+                    </div>
+                    <div class="right_info">
+                        <div class="title">
+                            <a href="/shows/the-four-battle-for-stardom/">
+                                <span class="show_title">
+                                    The Four: Battle for Stardom
+                                </span>
+                            </a>
+                        </div>
+                        <div class="network">
+                            FOX
+                        </div>
+                        <div class="links">
+                            <a href="/shows/the-four-battle-for-stardom/cast/">Cast</a>
+                            | <a href="/shows/the-four-battle-for-stardom/watch/">Watch</a>
+                        </div>
+                    </div>
+                    </li>
+
+
+                </ul>
+                <div class="_clearfix"></div>
+                <div class="bottom"></div>
+</div>
+
+
+
+		<div class="_standard_module">
+
+
+<div id="taboola-right-rail-thumbnails"></div>
+<script type="text/javascript">
+	window._taboola = window._taboola || [];
+	_taboola.push({
+		mode: 'alternating-thumbnails-c',
+		container: 'taboola-right-rail-thumbnails',
+		placement: 'Right Rail Thumbnails show_episode Desktop',
+		target_type: 'mix'
+	});
+</script>
+
+
+		</div>
+		<div class="m extra_mpu">
+
+	<div id="mpu_bottom" >
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+				if(typeof index_headertag_lightspeed !== 'undefined') {
+					index_headertag_lightspeed.add_session_end_hook(function(){
+						var slots = googletag.pubads().getSlots();
+						index_headertag_lightspeed.set_slot_targeting(slots);
+						googletag.display("mpu_bottom");
+					}, true);
+					index_headertag_lightspeed.refresh();
+				} else {
+					googletag.display("mpu_bottom");
+				}
+			});
+		</script>
+	</div>
+
+</div>
+	</div><!-- / col_b -->
+</div>
+<!--TVCOM_OK_SHOW_EPISODE-->
+
+			</div>
+		</div>
+
+
+
+	<div id="intromercial" >
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+				if(typeof index_headertag_lightspeed !== 'undefined') {
+					index_headertag_lightspeed.add_session_end_hook(function(){
+						var slots = googletag.pubads().getSlots();
+						index_headertag_lightspeed.set_slot_targeting(slots);
+						googletag.display("intromercial");
+					}, true);
+					index_headertag_lightspeed.refresh();
+				} else {
+					googletag.display("intromercial");
+				}
+			});
+		</script>
+	</div>
+
+
+
+
+
+			<div class="m footerleader">
+
+
+	<div id="leader_bottom" >
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+				if(typeof index_headertag_lightspeed !== 'undefined') {
+					index_headertag_lightspeed.add_session_end_hook(function(){
+						var slots = googletag.pubads().getSlots();
+						index_headertag_lightspeed.set_slot_targeting(slots);
+						googletag.display("leader_bottom");
+					}, true);
+					index_headertag_lightspeed.refresh();
+				} else {
+					googletag.display("leader_bottom");
+				}
+			});
+		</script>
+	</div>
+
+
+			</div>
+
+
+        <div class="legal content" style="display:none">
+            <div class="important">
+    <span class="label">Important:</span>
+    You must only upload images which you have created yourself or that you are expressly authorised or licensed to upload. By clicking "Publish", you are confirming that the image fully complies with TV.com’s <a href="https://cbsi.secure.force.com/CBSi/articles/FAQ/CBSi-Terms-of-Use?template=template_tougl&referer=tougl.com&data=&cfs=default">Terms of Use</a> and that you own all rights to the image or have authorization to upload it.
+</div>
+<div class="read">
+    <span class="label">Please read the following before uploading</span>
+    <div class="text">
+        Do not upload anything which you do not own or are fully licensed to upload. The images should not contain any sexually explicit content, race hatred material or other offensive symbols or images. Remember: Abuse of the TV.com image system may result in you being banned from uploading images or from the entire site – so, play nice and respect the rules!
+    </div>
+</div>
+
+        </div>
+
+
+<div>
+
+	<div class="m tv_footer">
+		<div class="container">
+			<div class="footer_logo">
+				<div class="bg_chooser">
+					<span>Choose background:</span>
+
+					<ul>
+						<li class="bg_default choice selected"></li>
+						<li class="bg_gray choice"></li>
+						<li class="bg_black choice"></li>
+					</ul>
+
+				</div>
+				<a href="http://www.tv.com" class="tvcom_logo"><img src="/public/images/tvcom_logos/TVcomLogoUS.png"></a>
+				<a href="https://twitter.com/tvdotcom" target="_blank"><span class="fa fa-twitter-square fa-2x"></span></a>
+				<a href="https://instagram.com/tvdotcom/" target="_blank"><span class="fa fa-instagram fa-2x"></span></a>
+				<a href="https://www.pinterest.com/tvcom/" target="_blank"><span class="fa fa-pinterest-square fa-2x"></span></a>
+				<a href="http://tvdotcom.tumblr.com/" target="_blank"><span class="fa fa-tumblr-square fa-2x"></span></a>
+			</div>
+			<div class="browse">
+				<a href="http://www.tv.com/shows/">Shows</a> |
+				<a href="http://www.tv.com/movies/">Movies</a> |
+				<a href="http://www.tv.com/web/">Web</a> |
+				<a href="http://www.tv.com/people/">People</a> |
+				<a href="http://www.tv.com/news/">News</a> |
+				<a href="http://www.tv.com/community/">Community</a>
+			</div>
+			<div class="browse">
+
+				<a href="http://www.tv.com/listings/">Listings</a> |
+
+				<a href="http://www.tv.com/captioning-info/">Closed Captioning</a> |
+				<a href="http://www.tvguidelines.org/ratings.htm" target="_blank">Rating Guidelines</a>
+
+				 | <a href="/m/shows/farscape/episodes/" id="mobile_me" rel="nofollow">Mobile</a>
+
+			</div>
+			<div class="meta">
+				CBS Entertainment
+				<a href="http://www.cbsinteractive.com/" target="_blank" rel="nofollow">About CBS Interactive</a> |
+				<a href="http://www.tv.com/about/">About TV.com</a> |
+				<a href="http://www.tv.com/about/contact/">Contact Us</a> |
+				<a href="http://www.cbsinteractive.com/careers/" target="_blank" rel="nofollow">Jobs</a> |
+				<a href="http://www.cbsinteractive.com/advertise/" target="_blank" rel="nofollow">Advertise</a>
+			</div>
+			<div class="meta">
+				&copy; 2020 CBS Interactive Inc.  All Rights Reserved.
+				<a href="http://www.tvguide.com/" target="_blank" rel="nofollow">TV Guide Digital Network</a> |
+				<a href="http://legalterms.cbsinteractive.com/privacy" target="_blank" rel="nofollow">Privacy Policy</a> |
+				<a href="http://legalterms.cbsinteractive.com/adchoice" target="_blank" rel="nofollow">Ad Choice</a> |
+				<a href="http://legalterms.cbsinteractive.com/terms-of-use" target="_blank" rel="nofollow">Terms of Use</a>
+			</div>
+			<div class="meta">
+				<a href="https://ca.privacy.cbs" target="_blank" rel="nofollow">California Privacy/Info We Collect</a> |
+                <a href="https://ca.privacy.cbs/donotsell" target="_blank" rel="nofollow">California Do Not Sell My Info</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+
+
+
+
+
+
+	<script type="text/javascript" src="/public/CACHE/js/a422cb1164d3.js"></script>
+
+
+
+
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+	var tvAuthConf = {
+		'secureHost': 'https://secure.tv.com',
+        'facebookAppId': '63749637650',
+        'ursAppId': 429,
+		'ursSocialAppId': 291,
+		'loggedIn': false,
+
+		'fbConnected': false,
+		'fbPublish': false,
+        'scPresent': false,
+        'roles': {
+            'userbase': 'unknown',
+            'toplist': 'unknown',
+            'randolph': 'unknown'
+        }
+    };
+    var CurrentUser = tvAuthConf;
+
+    (function() {
+        var authScript = document.createElement('script');
+        authScript.type = 'text/javascript';
+        authScript.async = true;
+        authScript.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + document.location.host + '/public/scripts/tv/auth.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(authScript, s);
+    })();
+</script>
+
+
+
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("img.lazy").lazyload({threshold:200});
+
+		});
+	</script>
+
+
+<script type="text/javascript">
+	window._taboola = window._taboola || [];
+	_taboola.push({flush: true});
+
+	if (typeof utag_data != "undefined") {
+		var taboola_placements = ""
+		$('*[id*=taboola-]:visible').each(function() {
+			var this_placement = $(this).attr('id');
+			if (taboola_placements.length < 1) {
+				taboola_placements = this_placement;
+			} else {
+				taboola_placements = taboola_placements + '|' + this_placement;
+			}
+			// Add click handlers if om
+			if (typeof om != 'undefined') {
+				function modifyOm() {
+					om.trackClick({'item':this_placement});
+				}
+				$(this).addEventListener("click", modifyOm);
+			}
+
+		});
+		utag_data.contentWidget = {taboola_placements}
+	}
+</script>
+
+
+
+</body>
+</html>
