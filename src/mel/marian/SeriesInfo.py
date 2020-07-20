@@ -2,6 +2,8 @@ import json
 import logging
 from tabulate import tabulate
 
+from mel.marian.util import filename_safety
+
 class SeriesInfo(object):
   def __init__(self, name):
     self.episodes = []
@@ -58,6 +60,13 @@ class SeriesInfo(object):
     answers = prompt(questions)
     if answers['save_episodes'] == 'Yes':
       self.save_episode_info()
+  def display(self):
+    print(self.season_numbers())
+    for season_no in self.season_numbers():
+      print("Season %d" % (season_no))
+      self.display_season(season_no)
+  def is_single_season(self):
+    return self.season_numbers() == [1]
   def display_season(self, season_no):
     self.display_episodes(self.season_episodes(season_no))
   def display_episodes(self, episodes):
@@ -71,3 +80,5 @@ class SeriesInfo(object):
       'choices': [episode['name'] for episode in episodes]
     }]
     return prompt(questions)
+  def episode_filename(self, episode, extension):
+    return filename_safety("{0} - S{1}E{2} - {3}{4}".format(self.name, str(episode['season_no']).zfill(2), str(episode['episode_no']).zfill(2), episode['name'], extension))
