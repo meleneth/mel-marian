@@ -8,6 +8,7 @@ from tabulate import tabulate
 from PyInquirer import prompt, print_json, Separator
 
 from mel.marian import GuideFetcher, EpisodeRenamer, SeriesInfo, EpisodeGuess
+from mel.marian.tables import ShowDB, Show, Season, Episode
 
 def main():
   logging.basicConfig(
@@ -22,6 +23,18 @@ def main():
   logger.info("Starting run in directory: %s" % (cwd))
   seriesname = os.path.basename(cwd)
   logger.info("Using '%s' as series name" % (seriesname))
+
+  ShowDB.connect(seriesname)
+  if ShowDB.db_existed:
+   logger.info("Found series info DB")
+  else:
+    fetcher = GuideFetcher()
+    fetcher.find_guide(seriesname)
+    fetcher.save_guide_db(seriesname)
+  seriesinfo = SeriesInfo(seriesname).load_show()
+  seriesinfo.interactive_db_audit_seriesdata()
+
+def old_implementation():
   series_info_filename = os.path.join(cwd, "%s.json" % (seriesname))
   if os.path.exists(series_info_filename):
     logger.info("Found series info .json")
@@ -29,6 +42,7 @@ def main():
     fetcher = GuideFetcher()
     fetcher.find_guide(seriesname)
     fetcher.save_guide(seriesname)
+
   seriesinfo = SeriesInfo(seriesname).load_episode_info(series_info_filename)
   seriesinfo.interactive_audit_seriesdata()
   logger.info("---- back in script land ----")

@@ -1,8 +1,11 @@
 import json
 import logging
+
+from sqlalchemy import func
 from tabulate import tabulate
 
 from mel.marian.util import filename_safety
+from mel.marian.tables import ShowDB, Show, Season, Episode
 
 class SeriesInfo(object):
   def __init__(self, name):
@@ -13,6 +16,9 @@ class SeriesInfo(object):
       self.episodes = json.load(f)
       sorted_eps = sorted(self.episodes, key=lambda x: x["season_no"])
       self.episodes = sorted(sorted_eps, key=lambda x: x["episode_no"])
+    return self
+  def load_show(self):
+    self.show = Show.find(name=self.name)
     return self
   def save_episode_info(self):
     with open(self.saved_info_filename(), "w") as f:
@@ -28,6 +34,24 @@ class SeriesInfo(object):
     return list(filter(lambda x: x['season_no'] == season_no, self.episodes))
   def matching_episodes(self, season_no, episode_no):
     return list(filter(lambda x: x['season_no'] == season_no and x['episode_no'] == episode_no, self.episodes))
+  def interactive_db_audit_seriesdata(self):
+    logger = logging.getLogger()
+    for season in self.show.seasons:
+      logger.info("---------And now, a penguin wearing a hat")
+      results = (ShowDB.session.query(
+        Episode.episode_no,
+        func.count(Episode.episode_no))
+        .group_by(Episode.episode_no)
+        .having(func.count(Episode.episode_no) > 1)
+        .filter(Episode.season_id == season.id)
+        .all()
+      )
+      for result in results:
+        logger.info(result)
+        dupes = ShowDB.session.query(Episode).filter(Episode.season_id == season.id, Episode.episode_no == result[0]).all()
+        print(dupes)
+
+    logger.info("Alas sweet yorick, I kissed him")
   def interactive_audit_seriesdata(self):
     logger = logging.getLogger()
     season_numbers = self.season_numbers()

@@ -1,3 +1,4 @@
+import datetime
 import re
 import logging
 import time
@@ -5,6 +6,8 @@ import json
 
 import requests
 from bs4 import BeautifulSoup
+
+from mel.marian.tables import ShowDB, Show, Season, Episode
 
 class GuideFetcher(object):
   def __init__(self):
@@ -32,6 +35,14 @@ class GuideFetcher(object):
   def save_guide(self, name):
     with open("%s.json" % (name), "w") as f:
       f.write(json.dumps(self.episodes))
+
+  def save_guide_db(self, name):
+    show = Show.find_or_create(name=name)
+    for episode in self.episodes:
+      season = show.season_find_or_create(season_no=episode['season_no'])
+      air_date = datetime.datetime.strptime(episode['air_date'], '%m/%d/%y')
+      season.episode_find_or_create(episode_no=episode['episode_no'], name=episode['name'], air_date=air_date.date(), description=episode['description'])
+    ShowDB.commit()
 
   def parse_search_result(self, soup):
     logger = logging.getLogger()
