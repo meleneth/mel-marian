@@ -33,24 +33,10 @@ def main():
     fetcher.save_guide_db(seriesname)
   seriesinfo = SeriesInfo(seriesname).load_show()
   seriesinfo.interactive_db_audit_seriesdata()
-
-def old_implementation():
-  series_info_filename = os.path.join(cwd, "%s.json" % (seriesname))
-  if os.path.exists(series_info_filename):
-    logger.info("Found series info .json")
-  else:
-    fetcher = GuideFetcher()
-    fetcher.find_guide(seriesname)
-    fetcher.save_guide(seriesname)
-
-  seriesinfo = SeriesInfo(seriesname).load_episode_info(series_info_filename)
-  seriesinfo.interactive_audit_seriesdata()
-  logger.info("---- back in script land ----")
+  seriesinfo.load_episodes()
   renamer = EpisodeRenamer()
   renamer.load_media_files()
   renamer.guess_series(seriesinfo)
   renamer.display_guesses()
   if renamer.any_need_renaming():
     renamer.confirm_and_move_files()
-  #print("--- back in script land, again ---")
-  #print(tabulate([[x['season_no'], x['episode_no'], x['name']] for x in seriesinfo.episodes], tablefmt="pretty"))

@@ -15,6 +15,14 @@ class SeriesInfo(object):
   def load_show(self):
     self.show = Show.find(name=self.name)
     return self
+  def load_episodes(self):
+    self.episodes = (ShowDB.session.query(Episode)
+      .join(Season)
+      .join(Show)
+      .filter(Show.id == self.show.id)
+      .order_by(Season.season_no)
+      .order_by(Episode.episode_no)
+      .all())
   def interactive_db_audit_seriesdata(self):
     logger = logging.getLogger()
     for season in self.show.seasons:
@@ -44,10 +52,12 @@ class SeriesInfo(object):
     if needs_commit:
       ShowDB.session.commit()
   def is_single_season(self):
-    return self.season_numbers() == [1]
+    return len(self.show.seasons) == 1
+  def display(self):
+    self.display_episodes(self.episodes)
   def display_season(self, season_no):
     self.display_episodes(self.season_episodes(season_no))
   def display_episodes(self, episodes):
-    print(tabulate([[x['season_no'], x['episode_no'], x['name']] for x in episodes], tablefmt="pretty"))
+    print(tabulate([[x.season.season_no, x.episode_no, x.name] for x in episodes], tablefmt="pretty"))
   def episode_filename(self, episode, extension):
-    return filename_safety("{0} - S{1}E{2} - {3}{4}".format(self.name, str(episode['season_no']).zfill(2), str(episode['episode_no']).zfill(2), episode['name'], extension))
+    return filename_safety("{0} - S{1}E{2} - {3}{4}".format(self.name, str(episode.season.season_no).zfill(2), str(episode.episode_no).zfill(2), episode.name, extension))

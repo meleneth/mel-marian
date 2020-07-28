@@ -32,16 +32,18 @@ class GuideFetcher(object):
       soup = self.fetch_and_parse_url(url)
       self.parse_season(soup)
 
-  def save_guide(self, name):
-    with open("%s.json" % (name), "w") as f:
-      f.write(json.dumps(self.episodes))
-
   def save_guide_db(self, name):
+    logger = logging.getLogger()
     show = Show.find_or_create(name=name)
     for episode in self.episodes:
       season = show.season_find_or_create(season_no=episode['season_no'])
-      air_date = datetime.datetime.strptime(episode['air_date'], '%m/%d/%y')
-      season.episode_find_or_create(episode_no=episode['episode_no'], name=episode['name'], air_date=air_date.date(), description=episode['description'])
+      logger.info("Parsing date %s", episode['air_date'])
+      air_date = None
+      try:
+        air_date = datetime.datetime.strptime(episode['air_date'], '%m/%d/%y').date()
+      except Exception:
+        pass
+      season.episode_find_or_create(episode_no=episode['episode_no'], name=episode['name'], air_date=air_date, description=episode['description'])
     ShowDB.commit()
 
   def parse_search_result(self, soup):
