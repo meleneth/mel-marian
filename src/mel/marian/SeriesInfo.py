@@ -23,6 +23,7 @@ class SeriesInfo(object):
       .order_by(Season.season_no)
       .order_by(Episode.episode_no)
       .all())
+    return self
   def interactive_db_audit_seriesdata(self):
     logger = logging.getLogger()
     for season in self.show.seasons:
@@ -60,4 +61,7 @@ class SeriesInfo(object):
   def display_episodes(self, episodes):
     print(tabulate([[x.season.season_no, x.episode_no, x.name] for x in episodes], tablefmt="pretty"))
   def episode_filename(self, episode, extension):
-    return filename_safety("{0} - S{1}E{2} - {3}{4}".format(self.name, str(episode.season.season_no).zfill(2), str(episode.episode_no).zfill(2), episode.name, extension))
+    season_no = ''
+    if episode.season:
+      season_no = "S%s" % (str(episode.season.season_no).zfill(2))
+    return filename_safety("{0} - {1}E{2} - {3}{4}".format(self.name, season_no, str(episode.episode_no).zfill(2), episode.name, extension))

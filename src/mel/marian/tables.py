@@ -16,10 +16,10 @@ class ShowDB(object):
   db_existed = None
 
   @classmethod
-  def connect(cls, seriesname):
+  def connect(cls, seriesname, echo=False):
     db_filename = filename_safety("%s.sqlite" % (seriesname))
     cls.db_existed = os.path.exists(db_filename)
-    engine = create_engine("sqlite:///%s" % db_filename, echo=True)
+    engine = create_engine("sqlite:///%s" % db_filename, echo=echo)
     if not cls.db_existed:
       Base.metadata.create_all(engine)
     Session.configure(bind=engine)

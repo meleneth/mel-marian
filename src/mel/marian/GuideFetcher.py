@@ -59,12 +59,15 @@ class GuideFetcher(object):
 
   def parse_season(self, soup):
     (title, season) = soup.find_all("title")[0].text.strip().split(" - ")[0:2]
-    season = int(season.replace("Season ", ""))
+    try:
+      season = int(season.replace("Season ", ""))
+    except Exception:
+      pass
     episodes = [x.parent for x in soup.find_all("div", class_="description")]
     for episode in episodes:
       info = {}
       info["show_name"] = title
-      info['season_no'] = season
+      info['season_no'] = season or 1
       info['name'] = episode.find("a", class_="title").text.strip()
       info['air_date'] = episode.find("div", class_="date").text.strip()
       info['description'] = episode.find("div", class_="description").text.strip()
