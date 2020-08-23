@@ -15,14 +15,13 @@ def entry_edit(args, seriesname):
   logger = logging.getLogger()
   interactive = InteractiveMetaEdit()
   interactive.set_seriesname(seriesname)
-  while(True):
-    interactive.choose()
+  interactive.go_display_choices()
 
+  while(True):
+    #logger.info("Current state is: %s", interactive.current_state)
     answer = prompt(interactive.question)
     if answer['choice']:
-      logger.info("Poor old michael finnagain (beginagain)")
       answer['choice']()
-
 
 def entry_default(args, seriesname):
   logger = logging.getLogger()
