@@ -27,7 +27,9 @@ class ShowDB(object):
   @classmethod
   def commit(cls):
     cls.session.commit()
-
+  @classmethod
+  def delete(cls, obj):
+    cls.session.delete(obj)
 
 class FindOrCreateMixin(object):
   @classmethod

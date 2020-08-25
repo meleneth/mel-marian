@@ -18,7 +18,7 @@ def entry_edit(args, seriesname):
   interactive.go_display_choices()
 
   while(True):
-    #logger.info("Current state is: %s", interactive.current_state)
+    logger.info("Current state is: %s", interactive.current_state)
     answer = prompt(interactive.question)
     if answer['choice']:
       answer['choice']()
