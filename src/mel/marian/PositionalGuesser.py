@@ -6,6 +6,7 @@ class PositionalGuesser(Guesser):
       if not guess.confidence:
         guess.confidence = 50
         guess.episode_no = episode.episode_no
+        guess.season_no = episode.season.season_no
         guess.episode_name = episode.name
         guess.series_name = seriesinfo.show.name
         guess.generate_destination_filename()
