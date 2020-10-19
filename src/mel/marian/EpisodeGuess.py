@@ -22,7 +22,6 @@ class EpisodeGuess(object):
 
   def extract_duration(self):
     info = pymediainfo.MediaInfo.parse(self.filename).to_data()
-    #pprint(info['tracks'])
     self.duration = info['tracks'][0]['other_duration'][3].split('.')[0]
 
   def is_video_file(self):

@@ -27,7 +27,7 @@ class EpisodeRenamer(object):
   def season_guesses(self, season_no):
     return list(filter(lambda x: x.season_no == season_no, self.guesses))
   def guess_series(self, seriesinfo):
-    seriesinfo.display()
+    #seriesinfo.display()
     if seriesinfo.is_single_season():
       for guess in self.guesses:
         guess.season_no = 1

@@ -68,6 +68,14 @@ class Episode(Base):
     return "<Episode(episode_no=%s, air_date='%s', name='%s')>" % (
       self.episode_no, self.air_date, self.name)
 
+  def filename(self, extension=".mkv"):
+    return filename_safety("{0} - S{1}E{2} - {3}{4}".format(
+      self.season.show.name,
+      str(self.season.season_no).zfill(2),
+      str(self.episode_no).zfill(2),
+      self.name,
+      extension))
+
 class Season(Base):
   __tablename__ = 'seasons'
 

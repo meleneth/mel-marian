@@ -10,6 +10,7 @@ from PyInquirer import prompt, print_json, Separator
 from mel.marian import GuideFetcher, EpisodeRenamer, SeriesInfo, EpisodeGuess
 from mel.marian.tables import ShowDB, Show, Season, Episode
 from mel.marian.episodeguiderename.interactive_meta_edit import InteractiveMetaEdit
+from mel.marian.episodeguiderename.interactive_season_rename import InteractiveSeasonRename
 
 def entry_edit(args, seriesname):
   logger = logging.getLogger()
@@ -23,9 +24,20 @@ def entry_edit(args, seriesname):
     if answer['choice']:
       answer['choice']()
 
+def entry_season_rename(args, seriesname):
+  logger = logging.getLogger()
+  interactive = InteractiveSeasonRename()
+  interactive.set_seriesname(seriesname)
+  interactive.go()
+
+  while(True):
+    logger.info("Current state is: %s", interactive.current_state)
+    answer = prompt(interactive.question)
+    if answer['choice']:
+      answer['choice']()
+
 def entry_default(args, seriesname):
   logger = logging.getLogger()
-
   if ShowDB.db_existed:
    logger.info("Found series info DB")
   else:
@@ -49,6 +61,9 @@ def get_parser():
 
   renamer_edit_parser = subparsers.add_parser('edit', help='')
   renamer_edit_parser.set_defaults(func=entry_edit)
+
+  renamer_renameseason_parser = subparsers.add_parser('seasonrename', help='')
+  renamer_renameseason_parser.set_defaults(func=entry_season_rename)
 
   return parser
 
