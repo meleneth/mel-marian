@@ -1,5 +1,6 @@
 import os
 import os.path
+import re
 
 from PyInquirer import prompt, print_json, Separator
 from tabulate import tabulate
@@ -14,6 +15,14 @@ class EpisodeRenamer(object):
     self.extra_files = []
     self.series_info = False
     self.guesses = []
+
+  def guess_seasons(self):
+    for guess in self.guesses:
+      if (m := re.search(r"Season (\d+)", guess.filename)):
+        guess.season_no = int(m.group(1))
+      if (m := re.search(r"S(\d+)E(\d+)", guess.filename)):
+        guess.season_no = int(m.group(1))
+
   def load_media_files(self):
     """Load all files from the current directory."""
     for dirName, subdirList, fileList in os.walk('.'):
@@ -22,10 +31,13 @@ class EpisodeRenamer(object):
         guesser = EpisodeGuess(fname)
         if guesser.is_video_file():
           self.guesses.append(guesser)
+
   def display_guesses(self):
     print(tabulate([x.display_fields() for x in self.guesses]))
+
   def season_guesses(self, season_no):
     return list(filter(lambda x: x.season_no == season_no, self.guesses))
+
   def guess_series(self, seriesinfo):
     #seriesinfo.display()
     if seriesinfo.is_single_season():
@@ -38,6 +50,7 @@ class EpisodeRenamer(object):
       if guess.needs_rename():
         return True
     return False
+
   def confirm_and_move_files(self):
     questions = [{
       'type': 'list',
@@ -60,6 +73,7 @@ class EpisodeRenamer(object):
         logging.info("Destination already exists - ignoring" % (destination))
         continue
       os.rename(source, destination)
+
   def guess_file(self, filename):
     pass
 

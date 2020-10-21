@@ -31,7 +31,7 @@ def entry_season_rename(args, seriesname):
   interactive.go()
 
   while(True):
-    logger.info("Current state is: %s", interactive.current_state)
+    #logger.info("Current state is: %s", interactive.current_state)
     answer = prompt(interactive.question)
     if answer['choice']:
       answer['choice']()

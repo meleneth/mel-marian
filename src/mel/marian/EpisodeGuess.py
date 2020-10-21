@@ -17,8 +17,8 @@ class EpisodeGuess(object):
     self.destination_filename = filename
     self.extension = os.path.splitext(self.filename)[1].lower()
     self.duration = "00:00:00"
-    if self.is_video_file():
-      self.extract_duration()
+    #if self.is_video_file():
+    #  self.extract_duration()
 
   def extract_duration(self):
     info = pymediainfo.MediaInfo.parse(self.filename).to_data()

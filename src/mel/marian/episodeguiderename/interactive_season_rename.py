@@ -79,7 +79,8 @@ class InteractiveSeasonRename(StateMachine):
 
     renamer = EpisodeRenamer()
     renamer.load_media_files()
-    renamer.guess_series(seriesinfo)
+    renamer.guess_series(seriesinfo) # sucks at getting seasons right, so
+    renamer.guess_seasons()
     self.guesses = [x for x in renamer.guesses if x.season_no == self.selected_season.season_no]
     self.go()
 
@@ -113,19 +114,19 @@ class InteractiveSeasonRename(StateMachine):
 
   def on_enter_guess_select(self):
     logger = logging.getLogger()
-    logger.info("+----------------------+")
-    logger.info("+ Matched Guesses      +")
-    logger.info("+----------------------+")
+    logger.info("+-----------------+")
+    logger.info("+ Matched Guesses +")
+    logger.info("+-----------------+")
     for guess in self.matched_guesses():
       logger.info("%s --> %s" % (guess.filename, guess.destination_filename))
-    logger.info("+----------------------+")
-    logger.info("+ UnMatched Guesses    +")
-    logger.info("+----------------------+")
+    logger.info("+-------------------+")
+    logger.info("+ UnMatched Guesses +")
+    logger.info("+-------------------+")
     for guess in self.unmatched_guesses():
       logger.info("%s" % (guess.filename))
-    logger.info("+----------------------+")
-    logger.info("+ UnMatched Episodes   +")
-    logger.info("+----------------------+")
+    logger.info("+--------------------+")
+    logger.info("+ UnMatched Episodes +")
+    logger.info("+--------------------+")
     for guess in self.unmatched_episodes():
       logger.info("%s" % (guess.name))
 
